@@ -2,8 +2,8 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-03-27 06:51",
-    "totalProperties": 10
+    "lastUpdated": "2026-03-27 07:43",
+    "totalProperties": 13
   },
   "properties": [
     {
@@ -155,6 +155,48 @@
       "rating": 0
     },
     {
+      "id": 5,
+      "title": "南正一路 - 鳳山五甲可租補含管",
+      "address": "高雄市鳳山區南正一路",
+      "price": 22000,
+      "priceNote": "",
+      "rooms": "4房2廳2衛 + 2陽台1廚房",
+      "area": 43.24,
+      "areaUnit": "坪",
+      "features": [
+        "電梯大廈",
+        "可租補含管",
+        "五甲地區"
+      ],
+      "source": "樂屋網",
+      "sourceUrl": "https://www.rakuya.com.tw/rent/rent_item?ehid=0e2a02336380124",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "",
+      "images": [
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_1_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_2_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_3_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_4_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_5_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_6_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_7_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_8_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_9_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_10_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_11_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_12_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_13_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_14_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_15_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_16_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_17_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_18_b.jpeg?1774445467",
+        "https://static.rakuya.com.tw/r1/n012/d6/81/33638012_19_b.jpeg?1774445467"
+      ],
+      "rating": 0
+    },
+    {
       "id": 6,
       "title": "自由三路 - 新民國小/自由黃昏市場",
       "address": "高雄市左營區自由三路394巷50號九樓",
@@ -237,6 +279,44 @@
       "rating": 0
     },
     {
+      "id": 8,
+      "title": "陽明國中4+5樓 - 透天",
+      "address": "陽明國中4+5樓",
+      "price": null,
+      "priceNote": "洽談中",
+      "rooms": "5房（4樓+5樓雙層）",
+      "area": null,
+      "areaUnit": "",
+      "features": [
+        "透天",
+        "學區房",
+        "屋主自出租"
+      ],
+      "source": "好房網",
+      "sourceUrl": "http://rent.housefun.com.tw/rent/house/1962689",
+      "status": "rejected",
+      "contactTime": "",
+      "notes": "太老舊。",
+      "images": [
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/1?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/2?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/3?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/4?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/5?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/6?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/7?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/8?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/9?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/10?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/11?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/12?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/13?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/14?t=0001",
+        "https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/15?t=0001"
+      ],
+      "rating": 1
+    },
+    {
       "id": 9,
       "title": "三民區 - 整層住家",
       "address": "高雄市三民區",
@@ -305,6 +385,40 @@
       "rating": 0
     },
     {
+      "id": 11,
+      "title": "明仁路 - 河堤美裝潢大3改2房平移車位",
+      "address": "高雄市三民區明仁路",
+      "price": 22000,
+      "priceNote": "",
+      "rooms": "3房2廳2衛",
+      "area": 41.177,
+      "areaUnit": "坪",
+      "features": [
+        "有電梯",
+        "近捷運",
+        "近商圈",
+        "拎包入住",
+        "可開伙",
+        "可養寵物",
+        "有車位",
+        "全套家具家電",
+        "河堤公園"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20417818",
+      "status": "rejected",
+      "contactTime": "",
+      "notes": "河堤美裝潢大3改2房平移車位，附B1平移車位，住戶單純15戶，不提供租屋補助。仲介洪先生 (百讚不動產)。\n不能申請租屋補助，所以不考慮。",
+      "images": [
+        "https://img1.591.com.tw/house/2025/08/06/175444477857394104.jpg!1000x.water2.jpg",
+        "https://img1.591.com.tw/house/2025/08/06/175444477863157800.jpg!1000x.water2.jpg",
+        "https://img1.591.com.tw/house/2025/08/06/175444477864676802.jpg!1000x.water2.jpg",
+        "https://img1.591.com.tw/house/2025/08/06/175444477874208302.jpg!1000x.water2.jpg",
+        "https://img1.591.com.tw/house/2025/08/06/175444477885214205.jpg!1000x.water2.jpg"
+      ],
+      "rating": 0
+    },
+    {
       "id": 12,
       "title": "明仁路 - 中迪房屋大樂河堤正三房",
       "address": "高雄市三民區明仁路",
@@ -366,55 +480,6 @@
         "https://img2.591.com.tw/house/2022/12/18/167137283892282903.jpg!510x400.jpg"
       ],
       "rating": 0
-    },
-    {
-      "id": 14,
-      "title": "永義街 - 小港區溫馨三房出租（屋主自租）",
-      "address": "高雄市小港區永義街",
-      "price": 16000,
-      "priceNote": "押金二個月",
-      "rooms": "3房2廳2衛2陽台",
-      "area": 26,
-      "areaUnit": "坪",
-      "features": [
-        "屋主自租",
-        "家具家電完整",
-        "拎包入住",
-        "全新裝潢",
-        "採光通風好",
-        "機車位",
-        "可開伙"
-      ],
-      "source": "Facebook 自租",
-      "sourceUrl": "https://www.facebook.com/share/p/1Q6TSEBb34",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "屋主自租，全新裝潢、家具家電完整（LG變頻冰箱、洗衣機、3台變頻冷氣、液晶電視）。步行約2分鐘到早市、7-11及公園。可養寵物（需確認）。管理費無，水電瓦斯實支實付。"
-    },
-    {
-      "id": 15,
-      "title": "鳳山市中心-家樂福美三房電梯華廈（頂樓）",
-      "address": "高雄市鳳山市中心（近家樂福）",
-      "price": 19000,
-      "priceNote": "管理費另計，可小議",
-      "rooms": "3房1廳2衛1書房",
-      "area": null,
-      "areaUnit": "坪",
-      "features": [
-        "電梯華廈",
-        "頂樓安靜",
-        "附家具",
-        "全柚木實木地板",
-        "近捷運",
-        "近家樂福",
-        "24小時保全",
-        "地下室機車位"
-      ],
-      "source": "Facebook 自租",
-      "sourceUrl": null,
-      "status": "pending",
-      "contactTime": "",
-      "notes": "7樓頂樓（樓上沒鄰居吵），附變頻冷氣3台、冰箱、洗衣機。不可養寵物、不可安神明/祖先牌位。近鳳山站5分鐘、中山路夜市5分鐘、衛武營5分鐘。廖先生 0958989942。"
     }
   ],
   "contactLogs": [
