@@ -461,6 +461,15 @@
         </div>
         <div class="properties grid-view" id="propertiesList"></div>
 
+        <!-- Monitor Queue Section -->
+        <div id="monitorSection" style="display:none;margin-top:30px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+                <h2 style="margin:0;font-size:1.2rem;color:var(--primary)">📡 自動監控發現 <span id="monitorCount" style="font-size:0.85rem;opacity:0.7"></span></h2>
+                <button class="btn btn-sm btn-outline" onclick="clearMonitorQueue()" style="font-size:0.75rem">🗑️ 清空已讀</button>
+            </div>
+            <div class="properties grid-view" id="monitorList"></div>
+        </div>
+
         <div id="pageFooter" style="text-align:center;padding:30px 20px 10px;opacity:0.4;font-size:0.78rem;color:var(--text-secondary);font-style:italic"></div>
     </div>
 
@@ -806,9 +815,11 @@
         const counts = { all: props.length, pending: 0, contacted: 0, rejected: 0, approved: 0 };
         props.forEach(p => { if (counts[p.status] !== undefined) counts[p.status]++; });
         const labels = { all:'全部', pending:'⏳ 待聯繫', contacted:'📞 已聯繫', rejected:'❌ 已婉拒', approved:'💛 列入考慮' };
+        const queueLen = (data.monitorQueue || []).length;
+        const monitorBtn = `<button class="filter ${currentFilter==='monitor'?'active':''}" onclick="setFilter('monitor',this)" style="background:${currentFilter==='monitor'?'var(--primary)':'rgba(156,120,180,0.12)'};color:${currentFilter==='monitor'?'#fff':'#9c78b4'};border-color:rgba(156,120,180,0.3)">📡 自動監控<span class="cnt">${queueLen}</span></button>`;
         document.getElementById('filterBar').innerHTML = Object.entries(labels).map(([k,v]) =>
             `<button class="filter ${currentFilter===k?'active':''}" onclick="setFilter('${k}',this)">${v}<span class="cnt">${counts[k]}</span></button>`
-        ).join('');
+        ).join('') + monitorBtn;
     }
 
 
@@ -832,7 +843,112 @@
         return s;
     }
 
+    // ========== Monitor Queue Functions ==========
+    function renderMonitorQueue() {
+        const queue = data.monitorQueue || [];
+        const section = document.getElementById('monitorSection');
+        const container = document.getElementById('monitorList');
+        if (!section || !container) return;
+
+        if (currentFilter === 'monitor') {
+            section.style.display = 'block';
+            document.getElementById('propertiesList').style.display = 'none';
+            document.getElementById('monitorCount').textContent = `（${queue.length} 筆待篩選）`;
+
+            if (queue.length === 0) {
+                container.innerHTML = `<div class="empty"><div class="empty-icon">📡</div><p>目前沒有監控到的新物件</p><p style="margin-top:8px;font-size:0.85rem;opacity:0.6">系統每天自動搜尋 591，有新發現會出現在這裡</p></div>`;
+                return;
+            }
+
+            container.innerHTML = queue.map(p => {
+                const imgs = p.images || [];
+                const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(p.address)}`;
+                return `
+                <div class="property" style="border-left:4px solid #9c78b4;">
+                    <div class="property-img-section">
+                        ${imgs.length > 0
+                            ? `<img src="${esc(imgs[0])}" alt="${esc(p.title)}" loading="lazy" onerror="this.style.display='none'">`
+                            : `<div class="property-img-placeholder"><span class="icon">📡</span><span>自動監控發現</span></div>`}
+                        ${imgs.length > 1 ? `<span class="img-count">📷 ${imgs.length}</span>` : ''}
+                    </div>
+                    <div class="property-body">
+                        <div class="property-header">
+                            <div class="property-title-row">
+                                <span class="property-id" style="background:#9c78b4">#M${p.id}</span>
+                                <span class="property-title">${esc(p.title)}</span>
+                            </div>
+                            <div class="property-price-box">
+                                <div class="property-price">${p.price ? '💰 '+p.price.toLocaleString()+'元/月' : '洽談中'}</div>
+                            </div>
+                        </div>
+                        <div class="property-address">
+                            📍 ${esc(p.address)}
+                            <a href="${mapUrl}" target="_blank" rel="noopener">🗺️ 地圖</a>
+                        </div>
+                        <div class="property-details">
+                            <div class="detail"><div class="detail-label">格局</div><div class="detail-value">🛏️ ${esc(p.rooms||'-')}</div></div>
+                            <div class="detail"><div class="detail-label">坪數</div><div class="detail-value">📐 ${p.area||'-'}</div></div>
+                            <div class="detail"><div class="detail-label">來源</div><div class="detail-value">🏷️ ${esc(p.source)}</div></div>
+                            <div class="detail"><div class="detail-label">發現</div><div class="detail-value">📅 ${(p.notes||'').replace('[自動監控] ','').substring(0,10)}</div></div>
+                        </div>
+                        <div class="property-features">
+                            ${(p.features||[]).map(f=>`<span class="feature">${esc(f)}</span>`).join('')}
+                        </div>
+                        <div class="property-footer">
+                            <div class="footer-left">
+                                <span class="status" style="background:rgba(156,120,180,0.15);color:#9c78b4;border-color:rgba(156,120,180,0.3)">📡 自動監控</span>
+                                ${p.sourceUrl ? `<a class="source-link" href="${esc(p.sourceUrl)}" target="_blank" rel="noopener">🔗 591</a>` : ''}
+                            </div>
+                            <div class="property-actions">
+                                <button class="btn btn-sm" style="background:#d4a5a5;color:#fff;border:none" onclick="approveMonitor(${p.id})" title="加入追蹤">✅ 加入</button>
+                                <button class="btn btn-sm btn-danger" onclick="rejectMonitor(${p.id})" title="不考慮">❌</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        } else {
+            section.style.display = 'none';
+            document.getElementById('propertiesList').style.display = '';
+        }
+    }
+
+    function approveMonitor(queueId) {
+        const queue = data.monitorQueue || [];
+        const idx = queue.findIndex(q => q.id === queueId);
+        if (idx === -1) return;
+        const item = queue.splice(idx, 1)[0];
+        // Assign new ID in main list
+        const maxId = data.properties.reduce((m, p) => Math.max(m, p.id), 0);
+        item.id = maxId + 1;
+        item.status = 'pending';
+        item.notes = (item.notes || '') + '\n✅ 從監控佇列加入追蹤';
+        data.properties.push(item);
+        saveToServer();
+        renderAll();
+    }
+
+    function rejectMonitor(queueId) {
+        const queue = data.monitorQueue || [];
+        const idx = queue.findIndex(q => q.id === queueId);
+        if (idx === -1) return;
+        queue.splice(idx, 1);
+        saveToServer();
+        renderAll();
+    }
+
+    function clearMonitorQueue() {
+        if (!confirm('確定要清空所有監控佇列中的物件嗎？')) return;
+        data.monitorQueue = [];
+        saveToServer();
+        renderAll();
+    }
+
     function renderList() {
+        // If in monitor mode, render queue instead
+        renderMonitorQueue();
+        if (currentFilter === 'monitor') return;
+
         const query = (document.getElementById('searchInput').value || '').toLowerCase();
         const sortVal = document.getElementById('sortSelect').value;
         let list = data.properties.filter(p => {
@@ -1294,36 +1410,10 @@
     // Init dark button text
     if (document.documentElement.classList.contains('dark')) document.getElementById('darkBtn').textContent = '☀️ 淺色';
 
-    // ============ AUTO-SYNC (local server + GitHub Pages) ============
+    // ============ AUTO-SYNC (local server) ============
     const API_BASE = 'http://localhost:5566';
-    const isGitHubPages = location.hostname.includes('github.io');
-
-    // On GitHub Pages: fetch data.json from same origin
-    async function loadFromGitHub() {
-        try {
-            const res = await fetch('./data.json?t=' + Date.now(), { signal: AbortSignal.timeout(5000) });
-            if (res.ok) {
-                const ghData = await res.json();
-                if (ghData.properties) {
-                    ghData.properties.forEach(p => { if (!p.images) p.images=[]; if (p.rating===undefined) p.rating=0; });
-                    if (!ghData.contactLogs) ghData.contactLogs = [];
-                    if (!ghData.calendarEvents) ghData.calendarEvents = [];
-                    data = ghData;
-                    renderAll();
-                    document.getElementById('syncStatus').className = 'sync-status sync-ok';
-                    document.getElementById('syncStatus').textContent = '🟢 線上模式';
-                }
-            }
-        } catch {}
-    }
-    if (isGitHubPages) loadFromGitHub();
 
     async function checkServer() {
-        if (isGitHubPages) {
-            // On GitHub Pages, periodically reload data.json
-            await loadFromGitHub();
-            return;
-        }
         try {
             const res = await fetch(API_BASE + '/api/ping', { signal: AbortSignal.timeout(1500) });
             if (res.ok) {
@@ -1332,8 +1422,10 @@
                 document.getElementById('syncStatus').className = 'sync-status sync-ok';
                 document.getElementById('syncStatus').textContent = '🟢 同步模式';
                 if (wasOffline) {
+                    // First connect — load everything
                     await loadFromServer(true);
                 } else {
+                    // Already connected — only sync if server has newer data
                     await pollForChanges();
                 }
                 return true;
