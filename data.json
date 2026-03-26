@@ -2,8 +2,8 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-03-26 18:28",
-    "totalProperties": 12
+    "lastUpdated": "2026-03-26 21:10",
+    "totalProperties": 13
   },
   "properties": [
     {
@@ -458,6 +458,33 @@
         "https://img1.591.com.tw/house/2024/01/11/170495675682840606.jpg!1000x.water2.jpg"
       ],
       "rating": 0
+    },
+    {
+      "id": 13,
+      "title": "自由三路 - 左營區電梯大樓9F",
+      "address": "高雄市左營區自由三路394巷50號9F",
+      "price": 18000,
+      "priceNote": "租金 18,000 + 車位 2,000 + 管理費 2,380 = 月付 22,380",
+      "rooms": "3房",
+      "area": null,
+      "areaUnit": "坪",
+      "features": [
+        "電梯大樓",
+        "汽車平面車位",
+        "可停3台摩托車",
+        "近蝦皮店到店",
+        "近7-Eleven",
+        "近自由市場",
+        "可雙租屋補助",
+        "路口有停車格"
+      ],
+      "source": "實地看房",
+      "sourceUrl": "",
+      "status": "contacted",
+      "contactTime": "2026-03-26 20:00",
+      "notes": "看房筆記（2026-03-26 晚上看房）：\n• 離安上班很近\n• 樓下就有蝦皮店到店跟 7-Eleven\n• 汽車平面車位 $2,000/月\n• 可停 3 台摩托車（平面車位後方空間大，可再停 2 台 + 原本附 1 個機車位）\n• 三間房間都比目前的房間再大一點\n• 晚上七點多要追垃圾車\n• 可以接受雙租屋補助\n• 屋主是老師\n• 租金 $18,000 + 車位 $2,000 + 管理費 $2,380\n• 離自由市場很近，生活機能方便\n• 路口也有停車格",
+      "images": [],
+      "rating": 0
     }
   ],
   "contactLogs": [
@@ -488,6 +515,13 @@
       "phone": "0936247617",
       "result": "取得房仲聯繫方式",
       "nextAction": "預約看房"
+    },
+    {
+      "propertyId": 13,
+      "date": "2026-03-26 20:00",
+      "type": "實地看房",
+      "content": "實地看房完成。屋主是老師，可接受雙租屋補助。租金 18,000 + 車位 2,000 + 管理費 2,380。三間房間都比目前住的大。樓下有蝦皮店到店和 7-Eleven，離自由市場近。平面車位可停 3 台摩托車。晚上七點多要追垃圾車。",
+      "nextStep": "討論是否列入考慮"
     }
   ],
   "priceStats": {
@@ -513,5 +547,84 @@
       "propertyTitle": "大昌二路 - 大昌商圈樹德高應大優質四房",
       "note": "房仲：李小姐 (0936247617)"
     }
-  ]
+  ],
+  "searchConfig": {
+    "lastUpdated": "2026-03-26",
+    "targets": {
+      "districts": [
+        "高雄市鳳山區",
+        "高雄市三民區",
+        "高雄市苓雅區",
+        "高雄市新興區",
+        "高雄市左營區",
+        "高雄市仁武區",
+        "高雄市大寮區"
+      ],
+      "keywords": [
+        "澄清路"
+      ],
+      "notes": "澄清路一帶接近仁武、大寮也可以"
+    },
+    "budget": {
+      "max": 22000,
+      "requireSubsidyFriendly": true,
+      "note": "屋主要可接受申請租屋補助"
+    },
+    "propertyType": {
+      "priority1": {
+        "type": [
+          "電梯大樓",
+          "華廈"
+        ],
+        "usage": "整層住家",
+        "description": "第一優選：有電梯的大樓或華廈，整層住家"
+      },
+      "priority2": {
+        "type": [
+          "公寓"
+        ],
+        "floorPreference": "2-3F 低樓層",
+        "description": "第二備選：公寓但希望在 2-3F 低樓層"
+      }
+    },
+    "layout": {
+      "minRooms": 3,
+      "minBathrooms": 2,
+      "note": "至少 3 房、至少 2 間廁所"
+    },
+    "preferences": {
+      "parking": "有車位最好，非必要",
+      "pets": {
+        "hasCat": true,
+        "rule": "只要沒有明文禁止養寵物就傳給我。不需要標示「可寵」，格局對了就收錄",
+        "note": "養貓，會主動詢問房東能否接受"
+      },
+      "mustHave": [
+        "採光通風好",
+        "廚房乾淨整潔",
+        "廁所乾淨整潔",
+        "至少兩間廁所"
+      ]
+    },
+    "excludes": [
+      "頂樓加蓋",
+      "套房",
+      "老舊公寓",
+      "明文禁止養寵物"
+    ],
+    "sources": [
+      {
+        "name": "591租屋網",
+        "baseUrl": "https://rent.591.com.tw/"
+      },
+      {
+        "name": "樂屋網",
+        "baseUrl": "https://www.rakuya.com.tw/rent/"
+      },
+      {
+        "name": "好房網",
+        "baseUrl": "https://rent.housefun.com.tw/"
+      }
+    ]
+  }
 }
