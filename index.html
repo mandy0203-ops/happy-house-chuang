@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏡 找尋幸福之莊 2.0</title>
+    <style>
+        :root {
+            --primary: #c2a0aa; --primary-dark: #b08e98;
+            --gradient: linear-gradient(135deg, #e8d5d0 0%, #d4b5c7 50%, #c9b8d4 100%);
+            --pending-bg: #f5ebe0; --pending-text: #a07860;
+            --contacted-bg: #e8dff0; --contacted-text: #8871a8;
+            --rejected-bg: #f0ddd8; --rejected-text: #b07070;
+            --approved-bg: #f5edd4; --approved-text: #8a7a3e;
+            --bg: #f8f4f1; --card-bg: #fffbf9; --text: #5a4a4a; --text-secondary: #8e7e7e;
+            --border: #e8ddd8; --radius: 14px;
+            --accent-warm: #d4a9a0; --accent-cool: #b8aec8;
+        }
+        .dark {
+            --bg: #2a2028; --card-bg: #352a32; --text: #e0d8d8; --text-secondary: #b0a0a0;
+            --border: #4a3a42; --primary: #d4b0ba; --primary-dark: #c4a0aa;
+            --gradient: linear-gradient(135deg, #3a2830 0%, #2e2838 100%);
+            --pending-bg: #3e3028; --pending-text: #d4b090;
+            --contacted-bg: #302838; --contacted-text: #c0a8d8;
+            --rejected-bg: #3e2828; --rejected-text: #d8a0a0;
+            --approved-bg: #38341e; --approved-text: #d4c878;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+            background: var(--gradient); min-height: 100vh; padding: 20px;
+            transition: background 0.3s;
+        }
+        .dark body { background: var(--bg); }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* Header */
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+        .header h1 { color: #5a4a4a; font-size: 1.8rem; text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
+        .dark .header h1 { color: #e0d8d8; text-shadow: none; }
+        .motivation {
+            background: rgba(255,255,255,0.55); backdrop-filter: blur(8px);
+            border-radius: 14px; padding: 14px 20px; margin-bottom: 18px;
+            text-align: center; border: 1px solid rgba(255,255,255,0.4);
+        }
+        .dark .motivation { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1); }
+        .motivation-text {
+            font-size: 1.05rem; color: #7a6068; line-height: 1.6;
+            font-style: italic;
+        }
+        .dark .motivation-text { color: #c8b0b8; }
+        .motivation-sub { font-size: 0.8rem; color: #b09898; margin-top: 4px; }
+        .header-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+        .btn {
+            padding: 8px 14px; border: none; border-radius: 8px; font-size: 0.85rem;
+            cursor: pointer; transition: all 0.2s; font-weight: 500;
+            display: inline-flex; align-items: center; gap: 5px; white-space: nowrap;
+        }
+        .btn-white { background: white; color: var(--primary); }
+        .btn-white:hover { background: #f0f4ff; transform: translateY(-1px); }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-danger { background: #e53935; color: white; }
+        .btn-danger:hover { background: #c62828; }
+        .btn-sm { padding: 5px 10px; font-size: 0.78rem; }
+        .btn-ghost { background: rgba(255,255,255,0.45); color: #6a5a5a; border: 1px solid rgba(255,255,255,0.5); }
+        .btn-ghost:hover { background: rgba(255,255,255,0.65); }
+        .dark .btn-ghost { background: rgba(255,255,255,0.1); color: #c0b0b0; border-color: rgba(255,255,255,0.15); }
+        .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+        .btn-outline:hover { background: var(--pending-bg); }
+
+        /* Unsaved indicator */
+        .unsaved-badge {
+            background: #ff9800; color: white; padding: 4px 10px; border-radius: 12px;
+            font-size: 0.78rem; animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+        /* Stats */
+        .stats { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+        .stat-card {
+            background: var(--card-bg); padding: 12px 18px; border-radius: var(--radius);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06); text-align: center; flex: 1; min-width: 100px;
+        }
+        .stat-number { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .stat-label { color: var(--text-secondary); font-size: 0.8rem; margin-top: 2px; }
+
+        /* Search & Filter */
+        .search-box {
+            width: 100%; padding: 12px 18px; border: 1px solid transparent; border-radius: var(--radius);
+            margin-bottom: 12px; font-size: 0.95rem; outline: none;
+            background: var(--card-bg); color: var(--text);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+        .search-box:focus { border-color: var(--primary); box-shadow: 0 2px 16px rgba(194,160,170,0.25); }
+        .filter-bar { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+        .filter {
+            padding: 8px 16px; background: rgba(255,255,255,0.45);
+            border: 1px solid rgba(255,255,255,0.5); border-radius: 25px;
+            color: #7a6068; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;
+        }
+        .dark .filter { background: rgba(255,255,255,0.08); color: #b0a0a0; border-color: rgba(255,255,255,0.1); }
+        .filter.active { background: white; color: var(--primary-dark); border-color: white; font-weight: 600; box-shadow: 0 2px 8px rgba(180,140,150,0.2); }
+        .dark .filter.active { background: var(--primary); color: white; }
+        .filter:hover:not(.active) { background: rgba(255,255,255,0.6); }
+        .filter .cnt { font-size: 0.75rem; margin-left: 3px; opacity: 0.8; }
+
+        /* Sort & View */
+        .toolbar { display: flex; gap: 8px; margin-bottom: 14px; align-items: center; flex-wrap: wrap; }
+        .toolbar-label { color: #8a7078; font-size: 0.82rem; }
+        .dark .toolbar-label { color: var(--text-secondary); }
+        .toolbar select {
+            padding: 7px 12px; border: 1px solid rgba(255,255,255,0.5); border-radius: 8px;
+            background: rgba(255,255,255,0.45); color: #6a5a5a; font-size: 0.82rem; cursor: pointer;
+        }
+        .dark .toolbar select { background: var(--card-bg); color: var(--text); border-color: var(--border); }
+        .toolbar select option { color: #333; background: white; }
+        .view-toggle { margin-left: auto; display: flex; gap: 4px; }
+        .view-btn { padding: 6px 10px; border-radius: 6px; font-size: 0.85rem; }
+        .view-btn.active { background: white; color: var(--primary); }
+
+        /* Property Card */
+        .properties { display: grid; gap: 14px; }
+        .properties.grid-view { grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); }
+        .property {
+            background: var(--card-bg); border-radius: 16px; overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .property:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+        .property-img-section {
+            position: relative; width: 100%; height: 180px; background: #efe6e2;
+            overflow: hidden; cursor: pointer;
+        }
+        .dark .property-img-section { background: #2e2428; }
+        .property-img-section img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .property-img-placeholder {
+            width: 100%; height: 100%; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; color: #aaa; font-size: 0.85rem;
+        }
+        .property-img-placeholder .icon { font-size: 2.5rem; margin-bottom: 6px; }
+        .img-count {
+            position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6);
+            color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem;
+        }
+        .property-body { padding: 16px; }
+        .property-header {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            margin-bottom: 10px; flex-wrap: wrap; gap: 8px;
+        }
+        .property-title-row { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 180px; }
+        .property-title { font-size: 1.05rem; font-weight: bold; color: var(--text); }
+        .property-id { color: #bbb; font-size: 0.75rem; }
+        .property-rating { cursor: pointer; font-size: 1.1rem; letter-spacing: 1px; }
+        .property-price-box { text-align: right; }
+        .property-price {
+            font-size: 1.3rem; font-weight: bold; color: #a07880;
+            background: #f5ebe8; padding: 4px 12px; border-radius: 8px;
+        }
+        .dark .property-price { background: #3a2a30; color: #d4b0b8; }
+        .sync-status { font-size: 0.75rem; padding: 3px 8px; border-radius: 10px; }
+        .sync-ok { background: var(--approved-bg); color: var(--approved-text); }
+        .sync-off { background: var(--pending-bg); color: var(--pending-text); }
+        .property-address { color: var(--text-secondary); margin-bottom: 10px; font-size: 0.9rem; }
+        .property-address a { color: var(--primary); text-decoration: none; margin-left: 4px; font-size: 0.8rem; }
+        .property-address a:hover { text-decoration: underline; }
+        .property-details {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 6px; margin-bottom: 10px;
+        }
+        .detail { background: var(--bg); padding: 6px 10px; border-radius: 8px; }
+        .dark .detail { background: rgba(255,255,255,0.05); }
+        .detail-label { color: var(--text-secondary); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .detail-value { color: var(--text); font-weight: 500; font-size: 0.85rem; }
+        .property-features { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+        .feature {
+            background: #ede4e0; color: #8e7068;
+            padding: 3px 9px; border-radius: 20px; font-size: 0.75rem;
+        }
+        .dark .feature { background: #3e3530; color: #c8b0a8; }
+        .property-footer {
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 6px; padding-top: 10px; border-top: 1px solid var(--border);
+        }
+        .footer-left { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .status {
+            display: inline-flex; align-items: center; gap: 4px;
+            padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;
+        }
+        .status-pending { background: var(--pending-bg); color: var(--pending-text); }
+        .status-contacted { background: var(--contacted-bg); color: var(--contacted-text); }
+        .status-rejected { background: var(--rejected-bg); color: var(--rejected-text); }
+        .status-approved { background: var(--approved-bg); color: var(--approved-text); }
+        .overdue-badge {
+            background: #ff5722; color: white; padding: 2px 8px; border-radius: 10px;
+            font-size: 0.72rem; animation: pulse 2s infinite;
+        }
+        .source-link {
+            color: var(--primary); text-decoration: none; font-size: 0.8rem;
+        }
+        .source-link:hover { text-decoration: underline; }
+        .property-actions { display: flex; gap: 4px; }
+        .notes {
+            margin-top: 10px; padding: 10px; background: var(--bg); border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+        .dark .notes { background: rgba(255,255,255,0.05); }
+        .notes-title { font-weight: 600; margin-bottom: 4px; color: var(--text); font-size: 0.85rem; }
+        .notes-content { color: var(--text-secondary); line-height: 1.5; font-size: 0.85rem; white-space: pre-wrap; }
+
+        /* Compare panel */
+        .compare-bar {
+            position: fixed; bottom: 0; left: 0; right: 0; background: var(--card-bg);
+            padding: 12px 20px; box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            display: none; align-items: center; justify-content: center; gap: 12px; z-index: 100;
+        }
+        .compare-bar.show { display: flex; }
+        .compare-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+        .compare-chip {
+            background: var(--contacted-bg); color: var(--contacted-text);
+            padding: 4px 10px; border-radius: 12px; font-size: 0.8rem;
+            display: flex; align-items: center; gap: 4px;
+        }
+        .compare-chip .remove { cursor: pointer; font-weight: bold; }
+
+        /* Compare table */
+        .compare-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); display: none; justify-content: center;
+            align-items: flex-start; z-index: 1001; padding: 30px 16px; overflow-y: auto;
+        }
+        .compare-overlay.show { display: flex; }
+        .compare-table-wrap {
+            background: var(--card-bg); border-radius: 16px; padding: 24px;
+            width: 100%; max-width: 900px; max-height: 85vh; overflow-y: auto;
+        }
+        .compare-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+        .compare-table th, .compare-table td {
+            padding: 8px 12px; border-bottom: 1px solid var(--border); text-align: left;
+        }
+        .compare-table th { background: var(--bg); color: var(--text-secondary); font-weight: 600; font-size: 0.78rem; }
+        .compare-table td { color: var(--text); }
+        .compare-best { background: rgba(102,126,234,0.08); font-weight: 600; }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); display: none; justify-content: center;
+            align-items: flex-start; z-index: 1000; padding: 30px 16px; overflow-y: auto;
+        }
+        .modal-overlay.show { display: flex; }
+        .modal {
+            background: var(--card-bg); border-radius: 16px; padding: 24px;
+            width: 100%; max-width: 600px; box-shadow: 0 16px 50px rgba(0,0,0,0.25);
+            animation: slideUp 0.25s ease;
+        }
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } }
+        .modal h2 { margin-bottom: 16px; color: var(--text); font-size: 1.2rem; }
+        .form-group { margin-bottom: 12px; }
+        .form-group label { display: block; margin-bottom: 4px; color: var(--text-secondary); font-size: 0.85rem; font-weight: 500; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px;
+            font-size: 0.9rem; background: var(--card-bg); color: var(--text); font-family: inherit;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--primary); outline: none; box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 70px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+        /* Image upload area in modal */
+        .img-upload-area {
+            border: 2px dashed var(--border); border-radius: 8px; padding: 16px;
+            text-align: center; cursor: pointer; transition: border-color 0.2s;
+            position: relative; min-height: 80px;
+        }
+        .img-upload-area:hover { border-color: var(--primary); }
+        .img-upload-area.has-images { border-style: solid; }
+        .img-upload-hint { color: var(--text-secondary); font-size: 0.85rem; }
+        .img-preview-list { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+        .img-preview-thumb {
+            width: 60px; height: 60px; border-radius: 6px; object-fit: cover;
+            border: 2px solid var(--border); position: relative;
+        }
+        .img-remove-btn {
+            position: absolute; top: -6px; right: -6px; width: 18px; height: 18px;
+            background: #e53935; color: white; border: none; border-radius: 50%;
+            font-size: 0.7rem; cursor: pointer; line-height: 18px; text-align: center;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); display: none; justify-content: center;
+            align-items: center; z-index: 2000; cursor: pointer;
+        }
+        .lightbox.show { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 8px; }
+        .lightbox-nav {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(255,255,255,0.2); color: white; border: none;
+            padding: 12px 16px; font-size: 1.5rem; cursor: pointer; border-radius: 8px;
+        }
+        .lightbox-nav:hover { background: rgba(255,255,255,0.3); }
+        .lightbox-prev { left: 16px; }
+        .lightbox-next { right: 16px; }
+        .lightbox-close { position: absolute; top: 16px; right: 16px; color: white; font-size: 2rem; cursor: pointer; background: none; border: none; }
+        .lightbox-counter { position: absolute; bottom: 16px; color: white; font-size: 0.9rem; }
+
+        /* Toast */
+        .toast {
+            position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
+            background: #333; color: white; padding: 10px 20px; border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3); z-index: 3000;
+            animation: fadeInUp 0.25s ease; font-size: 0.9rem;
+        }
+        .toast.success { background: #2e7d32; }
+        .toast.error { background: #c62828; }
+        .toast.warning { background: #e65100; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translate(-50%, 16px); } }
+
+        .empty { text-align: center; color: #8a7078; padding: 50px 20px; }
+        .dark .empty { color: var(--text-secondary); }
+        .empty-icon { font-size: 3.5rem; margin-bottom: 12px; }
+
+        .fab {
+            position: fixed; bottom: 24px; right: 24px; width: 52px; height: 52px;
+            background: linear-gradient(135deg, #c8a0a8 0%, #b8a0c0 100%); border: none; border-radius: 50%;
+            color: white; font-size: 1.6rem; cursor: pointer;
+            box-shadow: 0 4px 16px rgba(180,140,160,0.4); transition: transform 0.2s; z-index: 50;
+        }
+        .fab:hover { transform: scale(1.1); }
+        #fileInput { display: none; }
+        #imgFileInput { display: none; }
+
+        .checkbox-compare {
+            position: absolute; top: 10px; left: 10px; z-index: 10;
+            width: 20px; height: 20px; cursor: pointer; accent-color: var(--primary);
+        }
+
+        /* Calendar Sidebar */
+        .cal-toggle {
+            position: fixed; top: 50%; right: 0; transform: translateY(-50%);
+            background: var(--card-bg); border: 1px solid var(--border); border-right: none;
+            padding: 10px 6px; border-radius: 8px 0 0 8px; cursor: pointer;
+            font-size: 1.1rem; z-index: 80; box-shadow: -2px 2px 8px rgba(0,0,0,0.08);
+            writing-mode: vertical-rl; letter-spacing: 2px; color: var(--text-secondary);
+        }
+        .cal-toggle:hover { background: var(--pending-bg); }
+        .cal-sidebar {
+            position: fixed; top: 0; right: -320px; width: 310px; height: 100vh;
+            background: var(--card-bg); border-left: 1px solid var(--border);
+            box-shadow: -4px 0 20px rgba(0,0,0,0.08); z-index: 90;
+            transition: right 0.3s ease; overflow-y: auto; padding: 16px;
+        }
+        .cal-sidebar.open { right: 0; }
+        .cal-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 12px;
+        }
+        .cal-header h3 { color: var(--text); font-size: 1rem; }
+        .cal-nav { display: flex; gap: 4px; }
+        .cal-nav button {
+            background: none; border: 1px solid var(--border); border-radius: 6px;
+            padding: 4px 8px; cursor: pointer; color: var(--text); font-size: 0.85rem;
+        }
+        .cal-nav button:hover { background: var(--pending-bg); }
+        .cal-grid {
+            display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px;
+            margin-bottom: 14px; text-align: center;
+        }
+        .cal-dow { font-size: 0.7rem; color: var(--text-secondary); padding: 4px 0; font-weight: 600; }
+        .cal-day {
+            padding: 6px 2px; border-radius: 6px; font-size: 0.8rem; cursor: pointer;
+            color: var(--text); transition: background 0.15s; position: relative;
+        }
+        .cal-day:hover { background: var(--pending-bg); }
+        .cal-day.today { font-weight: bold; color: var(--primary); box-shadow: inset 0 -2px 0 var(--primary); }
+        .cal-day.other-month { opacity: 0.3; }
+        .cal-day.has-event::after {
+            content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%);
+            width: 5px; height: 5px; background: var(--primary); border-radius: 50%;
+        }
+        .cal-day.selected { background: var(--primary); color: white; }
+        .cal-day.selected::after { background: white; }
+        .cal-events { border-top: 1px solid var(--border); padding-top: 10px; }
+        .cal-events h4 { color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 8px; }
+        .cal-event-item {
+            background: var(--bg); border-radius: 8px; padding: 8px 10px;
+            margin-bottom: 6px; font-size: 0.82rem; border-left: 3px solid var(--primary);
+        }
+        .dark .cal-event-item { background: rgba(255,255,255,0.05); }
+        .cal-event-time { color: var(--primary); font-weight: 600; }
+        .cal-event-title { color: var(--text); }
+        .cal-event-note { color: var(--text-secondary); font-size: 0.75rem; margin-top: 2px; }
+        .cal-event-del { float: right; cursor: pointer; opacity: 0.4; font-size: 0.75rem; }
+        .cal-event-del:hover { opacity: 1; }
+        .cal-add-form { margin-top: 10px; }
+        .cal-add-form input, .cal-add-form select, .cal-add-form textarea {
+            width: 100%; padding: 7px 10px; border: 1px solid var(--border); border-radius: 6px;
+            font-size: 0.82rem; margin-bottom: 6px; background: var(--card-bg); color: var(--text);
+            font-family: inherit;
+        }
+        .cal-add-form input:focus, .cal-add-form select:focus { border-color: var(--primary); outline: none; }
+        .cal-month-label { font-size: 0.95rem; font-weight: 600; color: var(--text); }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .header h1 { font-size: 1.3rem; }
+            .stat-card { padding: 8px 10px; min-width: 70px; }
+            .stat-number { font-size: 1.2rem; }
+            .property-img-section { height: 140px; }
+            .properties.grid-view { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .modal { padding: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏡 找尋幸福之莊 2.0</h1>
+            <div class="header-actions">
+                <span id="syncStatus" class="sync-status sync-off">⚡ 離線模式</span>
+                <span id="unsavedBadge" class="unsaved-badge" style="display:none">未儲存</span>
+                <button class="btn btn-ghost" onclick="toggleDark()" id="darkBtn">🌙 深色</button>
+                <button class="btn btn-ghost" onclick="fetchAllImages()" title="批量抓取所有物件照片">🖼️ 抓圖</button>
+                <button class="btn btn-ghost" onclick="document.getElementById('fileInput').click()">📂 載入</button>
+                <button class="btn btn-white" onclick="exportJSON()">💾 匯出</button>
+            </div>
+        </div>
+        <input type="file" id="fileInput" accept=".json" onchange="loadJSON(event)">
+        <input type="file" id="imgFileInput" accept="image/*" multiple onchange="handleImgFiles(event)">
+
+        <div class="motivation" id="motivationBox">
+            <div class="motivation-text" id="motivationText"></div>
+            <div class="motivation-sub" id="motivationSub"></div>
+        </div>
+
+        <div class="stats" id="statsBar"></div>
+        <input type="text" class="search-box" id="searchInput" placeholder="🔍 搜尋地址、標題、格局、來源、標籤..." oninput="renderList()">
+        <div class="filter-bar" id="filterBar"></div>
+        <div class="toolbar">
+            <span class="toolbar-label">排序：</span>
+            <select id="sortSelect" onchange="renderList()">
+                <option value="id-desc">新增（新→舊）</option>
+                <option value="id-asc">新增（舊→新）</option>
+                <option value="price-asc">租金（低→高）</option>
+                <option value="price-desc">租金（高→低）</option>
+                <option value="area-desc">坪數（大→小）</option>
+                <option value="area-asc">坪數（小→大）</option>
+                <option value="rating-desc">評分（高→低）</option>
+            </select>
+            <div class="view-toggle">
+                <button class="btn btn-sm view-btn btn-ghost" onclick="setView('list')" id="viewList">☰</button>
+                <button class="btn btn-sm view-btn btn-ghost active" onclick="setView('grid')" id="viewGrid">⊞</button>
+            </div>
+        </div>
+        <div class="properties grid-view" id="propertiesList"></div>
+
+        <div id="pageFooter" style="text-align:center;padding:30px 20px 10px;opacity:0.4;font-size:0.78rem;color:var(--text-secondary);font-style:italic"></div>
+    </div>
+
+    <!-- Calendar Sidebar -->
+    <div class="cal-toggle" onclick="toggleCalendar()">📅 看房行事曆</div>
+    <div class="cal-sidebar" id="calSidebar">
+        <div class="cal-header">
+            <h3>📅 看房行事曆</h3>
+            <button class="btn btn-sm btn-outline" onclick="toggleCalendar()" style="padding:2px 8px">✕</button>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div class="cal-nav">
+                <button onclick="calNav(-1)">‹</button>
+                <button onclick="calNav(1)">›</button>
+            </div>
+            <span class="cal-month-label" id="calMonthLabel"></span>
+            <button class="btn btn-sm btn-outline" onclick="calToday()" style="padding:2px 8px;font-size:0.75rem">今天</button>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+        <div class="cal-events" id="calEvents"></div>
+        <div class="cal-add-form" id="calAddForm">
+            <h4 style="color:var(--text-secondary);font-size:0.82rem;margin-bottom:6px">➕ 新增看房行程</h4>
+            <input type="date" id="calDate">
+            <input type="time" id="calTime" value="14:00">
+            <select id="calProperty">
+                <option value="">選擇物件...</option>
+            </select>
+            <input type="text" id="calNote" placeholder="備註（例：帶家人一起去看）">
+            <button class="btn btn-sm btn-primary" onclick="addCalEvent()" style="width:100%">新增行程</button>
+        </div>
+    </div>
+
+    <button class="fab" onclick="openModal()" title="新增房源">+</button>
+
+    <!-- Compare bar -->
+    <div class="compare-bar" id="compareBar">
+        <div class="compare-chips" id="compareChips"></div>
+        <button class="btn btn-primary btn-sm" onclick="showCompare()">📊 比較</button>
+        <button class="btn btn-outline btn-sm" onclick="clearCompare()">清除</button>
+    </div>
+
+    <!-- Compare overlay -->
+    <div class="compare-overlay" id="compareOverlay" onclick="event.target===this && closeCompare()">
+        <div class="compare-table-wrap">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+                <h2 style="color:var(--text)">📊 物件比較 <small style="font-weight:normal;font-size:0.6em;opacity:0.6">✦ 提高你的標準</small></h2>
+                <button class="btn btn-sm btn-outline" onclick="closeCompare()">✕ 關閉</button>
+            </div>
+            <table class="compare-table" id="compareTable"></table>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="event.target===this && closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+        <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();navLightbox(-1)">‹</button>
+        <img id="lightboxImg" src="" alt="">
+        <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation();navLightbox(1)">›</button>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="event.target===this && closeModal()">
+        <div class="modal">
+            <h2 id="modalTitle">新增房源</h2>
+            <input type="hidden" id="editId">
+            <div class="form-group">
+                <label>標題 *</label>
+                <input type="text" id="fTitle" placeholder="例：保泰路 - 芳鈞景觀四房">
+            </div>
+            <div class="form-group">
+                <label>地址 *</label>
+                <input type="text" id="fAddress" placeholder="例：高雄市鳳山區保泰路">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>月租金</label>
+                    <input type="number" id="fPrice" placeholder="18000">
+                </div>
+                <div class="form-group">
+                    <label>價格備註</label>
+                    <input type="text" id="fPriceNote" placeholder="含管理費">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>格局 *</label>
+                    <input type="text" id="fRooms" placeholder="4房2廳2衛">
+                </div>
+                <div class="form-group">
+                    <label>坪數</label>
+                    <input type="number" step="0.01" id="fArea" placeholder="57.12">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>特色標籤（逗號分隔）</label>
+                <input type="text" id="fFeatures" placeholder="電梯大廈, 近捷運站, 含車位">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>來源平台</label>
+                    <select id="fSource">
+                        <option value="樂屋網">樂屋網</option>
+                        <option value="好房網">好房網</option>
+                        <option value="591租屋網">591租屋網</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>狀態</label>
+                    <select id="fStatus">
+                        <option value="pending">⏳ 待聯繫</option>
+                        <option value="contacted">📞 已聯繫</option>
+                        <option value="rejected">❌ 已婉拒</option>
+                        <option value="approved">💛 列入考慮</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>原始連結</label>
+                <input type="url" id="fUrl" placeholder="https://...">
+            </div>
+            <div class="form-group">
+                <label>評分</label>
+                <div id="fRatingStars" style="font-size:1.5rem;cursor:pointer;letter-spacing:4px">
+                    <span onclick="setFormRating(1)">☆</span><span onclick="setFormRating(2)">☆</span><span onclick="setFormRating(3)">☆</span><span onclick="setFormRating(4)">☆</span><span onclick="setFormRating(5)">☆</span>
+                </div>
+                <input type="hidden" id="fRating" value="0">
+            </div>
+            <div class="form-group">
+                <label>照片（點擊上傳或拖曳圖片）</label>
+                <div class="img-upload-area" id="imgUploadArea" onclick="document.getElementById('imgFileInput').click()"
+                     ondragover="event.preventDefault();this.style.borderColor='var(--primary)'"
+                     ondragleave="this.style.borderColor=''"
+                     ondrop="handleImgDrop(event)">
+                    <div class="img-upload-hint" id="imgUploadHint">📷 點擊或拖曳圖片到此處<br><small>也可以貼上圖片網址</small></div>
+                    <div class="img-preview-list" id="imgPreviewList"></div>
+                </div>
+                <input type="text" id="fImgUrl" placeholder="或輸入圖片網址後按 Enter" style="margin-top:6px"
+                       onkeydown="if(event.key==='Enter'){event.preventDefault();addImgUrl()}">
+            </div>
+            <div class="form-group">
+                <label>聯絡筆記</label>
+                <textarea id="fNotes" placeholder="記錄聯絡狀況、房仲回覆等..."></textarea>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="closeModal()">取消</button>
+                <button class="btn btn-primary" onclick="saveProperty()">儲存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Log Modal -->
+    <div class="modal-overlay" id="contactModalOverlay" onclick="event.target===this && closeContactModal()">
+        <div class="modal">
+            <h2>📞 新增聯絡紀錄</h2>
+            <input type="hidden" id="contactPropertyId">
+            <div class="form-group">
+                <label>聯絡方式</label>
+                <select id="cMethod">
+                    <option value="電話聯繫">📞 電話聯繫</option>
+                    <option value="Line">💬 Line</option>
+                    <option value="Email">📧 Email</option>
+                    <option value="現場看房">🏠 現場看房</option>
+                    <option value="其他">其他</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>聯絡結果 *</label>
+                <textarea id="cResult" placeholder="例：房仲說屋主希望住的人少一點..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>下一步行動</label>
+                <input type="text" id="cNextAction" placeholder="例：等待房仲回電">
+            </div>
+            <div class="form-group">
+                <label>更新狀態為</label>
+                <select id="cStatus">
+                    <option value="contacted">📞 已聯繫</option>
+                    <option value="pending">⏳ 待聯繫</option>
+                    <option value="rejected">❌ 已婉拒</option>
+                    <option value="approved">💛 列入考慮</option>
+                </select>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="closeContactModal()">取消</button>
+                <button class="btn btn-primary" onclick="saveContactLog()">儲存紀錄</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // ============ DATA ============
+    let data = {
+        meta: { title: "租房追蹤資料", created: "", lastUpdated: "", totalProperties: 0 },
+        properties: [],
+        contactLogs: [],
+        priceStats: {}
+    };
+    let currentFilter = 'all';
+    let currentView = 'grid';
+    let compareSet = new Set();
+    let unsavedChanges = 0;
+    let formImages = []; // temp images for modal
+    let serverMode = false;
+    let syncTimer = null;
+    let lastKnownUpdate = ''; // track server data version
+    let lightboxImages = []; let lightboxIdx = 0;
+
+    // ============ INIT ============
+    const EMBEDDED_DATA = {"meta":{"title":"找尋幸福之莊 2.0","created":"2026-03-26","lastUpdated":"2026-03-26 18:28","totalProperties":12},"properties":[{"id":1,"title":"中山東路 - 租好房","address":"高雄市鳳山區中山東路","price":18000,"priceNote":"","rooms":"4房2廳2衛","area":25.64,"areaUnit":"坪","features":["電梯大廈","近鳳山國中","近捷運站","工協市場","平面車位"],"source":"樂屋網","sourceUrl":"https://www.rakuya.com.tw/rent/rent_item?ehid=0a634a33429735b","status":"pending","contactTime":"","notes":"","images":["https://static.rakuya.com.tw/r2/n735/d1/35/33429735_25_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_26_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_27_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_28_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_29_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_30_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_31_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_32_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_33_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_34_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_35_b.jpeg?1773831784","https://static.rakuya.com.tw/r2/n735/d1/35/33429735_36_b.jpeg?1773831784"],"rating":0},{"id":2,"title":"保泰路 - 芳鈞","address":"高雄市鳳山區保泰路","price":18000,"priceNote":"","rooms":"4房2廳2衛 + 3陽台1廚房","area":57.12,"areaUnit":"坪","features":["電梯大廈","五甲瑞隆商圈景觀"],"source":"樂屋網","sourceUrl":"https://www.rakuya.com.tw/rent/rent_item?ehid=02ee83334452516","status":"pending","contactTime":"","notes":"","images":["https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_1_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_2_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_3_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_4_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_5_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_6_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_7_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_8_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_9_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_10_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_11_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_12_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_13_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_14_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_15_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_16_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_17_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_18_b.jpeg?1774172207","https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_19_b.jpeg?1774172207"],"rating":0},{"id":3,"title":"大昌二路 - 大昌商圈樹德高應大優質四房","address":"高雄市三民區大昌二路","price":18000,"priceNote":"","rooms":"4房2廳2衛","area":46.12,"areaUnit":"坪","features":["電梯大廈","大昌商圈","近樹德高應大"],"source":"樂屋網","sourceUrl":"https://www.rakuya.com.tw/rent/rent_item?ehid=013f4e33000919e","status":"pending","contactTime":"","notes":"房仲：李小姐 (0936247617)
+","images":["https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_1_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_4_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_5_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_6_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_7_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_8_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_9_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_10_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_11_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_12_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_13_b.jpeg?1772366811","https://static.rakuya.com.tw/r2/n919/9b/5b/33000919_3_b.jpeg?1772366811"],"rating":0},{"id":4,"title":"覺民路 - 陽明商圈採光四房","address":"高雄市三民區覺民路","price":19000,"priceNote":"","rooms":"4房2廳2衛","area":51.23,"areaUnit":"坪","features":["電梯大廈","陽明商圈","採光好"],"source":"樂屋網","sourceUrl":"https://www.rakuya.com.tw/rent/rent_item?ehid=0b9626332684103","status":"pending","contactTime":"","notes":"","images":["https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_1_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_2_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_3_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_4_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_5_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_6_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_7_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_8_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_9_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_10_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_11_b.jpeg?1770398062","https://static.rakuya.com.tw/r1/n410/9a/0a/33268410_12_b.jpeg?1770398062"],"rating":0},{"id":5,"title":"南正一路 - 鳳山五甲可租補含管","address":"高雄市鳳山區南正一路","price":22000,"priceNote":"","rooms":"4房2廳2衛 + 2陽台1廚房","area":43.24,"areaUnit":"坪","features":["電梯大廈","可租補含管","五甲地區"],"source":"樂屋網","sourceUrl":"https://www.rakuya.com.tw/rent/rent_item?ehid=0e2a02336380124","status":"pending","contactTime":"","notes":"","images":["https://static.rakuya.com.tw/r1/n012/d6/81/33638012_1_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_2_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_3_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_4_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_5_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_6_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_7_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_8_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_9_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_10_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_11_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_12_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_13_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_14_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_15_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_16_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_17_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_18_b.jpeg?1774445467","https://static.rakuya.com.tw/r1/n012/d6/81/33638012_19_b.jpeg?1774445467"],"rating":0},{"id":6,"title":"自由三路 - 新民國小/自由黃昏市場","address":"高雄市左營區自由三路394巷50號九樓","price":18000,"priceNote":"","rooms":"3房2廳2衛 + 1陽台1廚房","area":24,"areaUnit":"坪","features":["電梯大廈","近新民國小","近自由黃昏市場","含平面車位"],"source":"樂屋網","sourceUrl":"https://www.rakuya.com.tw/rent/rent_item?ehid=07a761324632339","status":"contacted","contactTime":"2026-03-26 16:50","notes":"2026-03-26 16:50 聯繫房仲劉小姐 (0908-694899)，約今晚 8 點看房子，地址：左營區自由三路394巷50號九樓","images":["https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_1_b.jpeg?1773141019","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_2_b.jpeg?1773141019","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_3_b.jpeg?1773141019","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_4_b.jpeg?1773141019","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_5_b.jpeg?1773141019","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_6_b.jpeg?1773141019","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_7_b.jpeg?1773141019","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_8_b.jpeg?1773141020","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_9_b.jpeg?1773141020","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_10_b.jpeg?1773141020","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_11_b.jpeg?1773141019","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_12_b.jpeg?1773141020","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_13_b.jpeg?1773141020","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_14_b.jpeg?1773141020","https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_15_b.jpeg?1773141020"],"rating":0},{"id":7,"title":"陽明學區 - 屋主自出租","address":"近陽明國小國中學區","price":null,"priceNote":"洽談中","rooms":"3房2廳2衛","area":null,"areaUnit":"","features":["學區房","屋主自出租"],"source":"好房網","sourceUrl":"http://rent.housefun.com.tw/rent/house/1980764","status":"pending","contactTime":"","notes":"","images":["https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A0012026000030911581769a20.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A00120260000309115805fb242.jpg?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A00120260000309115805cc2db.jpg?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A001202600003091158099dd99.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A0012026000030911581094c5d.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A00120260000309115811951a7.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A0012026000030911581138bb2.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A00120260000309115812904cd.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A001202600003091158125549a.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A001202600003091158130ba53.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A0012026000030911581341160.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A0012026000030911581418897.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A00120260000309115815278a2.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A00120260000309115815c9b37.JPG?t=1529","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT07/Z999/4fcb6ceb-b3b4-4f55-8605-2dc555eb5626/Z999A0012026000030911581630d0c.JPG?t=1529"],"rating":0},{"id":8,"title":"陽明國中4+5樓 - 透天","address":"陽明國中4+5樓","price":null,"priceNote":"洽談中","rooms":"5房（4樓+5樓雙層）","area":null,"areaUnit":"","features":["透天","學區房","屋主自出租"],"source":"好房網","sourceUrl":"http://rent.housefun.com.tw/rent/house/1962689","status":"rejected","contactTime":"","notes":"","images":["https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/1?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/2?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/3?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/4?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/5?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/6?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/7?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/8?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/9?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/10?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/11?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/12?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/13?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/14?t=0001","https://pic.hfcdn.com/res/DrawImage/ShowPic/600/0/HFRENT06/1962689/15?t=0001"],"rating":1},{"id":9,"title":"三民區 - 整層住家","address":"高雄市三民區","price":17000,"priceNote":"","rooms":"整層住家","area":null,"areaUnit":"","features":["整層住家"],"source":"591租屋網","sourceUrl":"https://www.591.com.tw/1R?salt=Sm1jO&s=il","status":"pending","contactTime":"","notes":"","images":["https://img1.591.com.tw/house/2013/01/18/135851197811577205.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2013/01/18/135851198418906907.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2013/01/18/135851199302753400.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2013/01/18/135851200874826800.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2013/01/18/135851201863528706.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2019/06/15/156059243033439803.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2019/06/15/156059261181944407.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2019/06/15/156059259547713604.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2019/06/15/156059260153753505.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2019/06/15/156059260609020501.jpg!1000x.water2.jpg"],"rating":0},{"id":10,"title":"同心路 - 上頂至善３房美宅","address":"高雄市新興區同心路","price":18000,"priceNote":"","rooms":"3房2廳2衛","area":37.21,"areaUnit":"坪","features":["電梯大廈"],"source":"樂屋網","sourceUrl":"https://www.rakuya.com.tw/rent/rent_item?ehid=0d3b1a33210089e","status":"contacted","contactTime":"2026-03-26 15:50","notes":"2026-03-26 15:50 聯繫，房仲說屋主希望人住的人數少一點，會再回電話","images":["https://static.rakuya.com.tw/r1/n089/89/5b/33210089_1_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_2_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_3_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_4_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_5_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_6_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_7_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_8_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_9_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_10_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_11_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_12_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_29_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_30_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_31_b.jpeg?1772543834","https://static.rakuya.com.tw/r1/n089/89/5b/33210089_32_b.jpeg?1772543834"],"rating":0},{"id":11,"title":"明仁路 - 河堤美裝潢大3改2房平移車位","address":"高雄市三民區明仁路","price":22000,"priceNote":"","rooms":"3房2廳2衛","area":41.177,"areaUnit":"坪","features":["有電梯","近捷運","近商圈","拎包入住","可開伙","可養寵物","有車位","全套家具家電","河堤公園"],"source":"591租屋網","sourceUrl":"https://rent.591.com.tw/20417818","status":"rejected","contactTime":"","notes":"河堤美裝潢大3改2房平移車位，附B1平移車位，住戶單純15戶，不提供租屋補助。仲介洪先生 (百讚不動產)。","images":["https://img1.591.com.tw/house/2025/08/06/175444477857394104.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2025/08/06/175444477863157800.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2025/08/06/175444477864676802.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2025/08/06/175444477874208302.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2025/08/06/175444477885214205.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2025/08/06/175444477884171006.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2025/08/06/175444477892149501.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2025/08/06/175444477903574306.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2025/08/06/175444498726498305.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2025/08/06/175444498732715400.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2025/08/06/175444513088817609.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2025/08/06/175444513098159309.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2025/08/06/175444513108668904.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2025/08/06/175444525395035104.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2025/08/06/175444537870506701.jpg!1000x.water2.jpg"],"rating":0},{"id":12,"title":"明仁路 - 中迪房屋大樂河堤正三房","address":"高雄市三民區明仁路","price":17000,"priceNote":"押金二個月","rooms":"3房1廳2衛","area":32.63,"areaUnit":"坪","features":["有電梯","近捷運","近商圈","可開伙","免服務費","社會住宅","租金補貼","可入籍"],"source":"591租屋網","sourceUrl":"https://rent.591.com.tw/20915798","status":"pending","contactTime":"","notes":"河堤社區電梯三房空屋出租，一層兩戶一部電梯！鄰近大樂、台安醫院，生活機能便利。不可養寵物。管理費：1929元。","images":["https://img2.591.com.tw/house/2026/03/24/177434167826686801.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2026/03/24/177434167793170907.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2026/03/24/177434167802511001.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2024/01/11/170495675678942907.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2026/03/24/177434167802255109.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2026/03/24/177434167770697707.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2024/01/11/170495677306689302.jpg!1000x.water2.jpg","https://img2.591.com.tw/house/2024/01/11/170495675704666400.jpg!1000x.water2.jpg","https://img1.591.com.tw/house/2024/01/11/170495675682840606.jpg!1000x.water2.jpg"],"rating":0}],"contactLogs":[{"propertyId":10,"propertyTitle":"同心路 - 上頂至善３房美宅","contactTime":"2026-03-26 15:50","method":"電話聯繫","result":"屋主希望人住的人數少一點","nextAction":"等待房仲回電"},{"propertyId":6,"propertyTitle":"自由三路 - 新民國小/自由黃昏市場","contactTime":"2026-03-26 16:50","method":"電話聯繫","result":"約今晚 8 點看房子","nextAction":"今晚 8 點看房","contactPerson":"劉小姐","phone":"0908-694899"},{"propertyId":3,"propertyTitle":"大昌二路 - 大昌商圈樹德高應大優質四房","contactTime":"2026-03-26 17:50","method":"未知","contactPerson":"李小姐","phone":"0936247617","result":"取得房仲聯繫方式","nextAction":"預約看房"}],"priceStats":{"minPrice":17000,"maxPrice":22000,"averagePrice":18700,"countWithPrice":10},"calendarEvents":[{"id":"ev_auto_1","date":"2026-03-26","time":"20:00","propertyId":6,"propertyTitle":"自由三路 - 新民國小/自由黃昏市場","note":"房仲劉小姐 (0908-694899)｜地址：左營區自由三路394巷50號九樓"},{"id":"ev_auto_2","date":"2026-03-29","time":"15:00","propertyId":3,"propertyTitle":"大昌二路 - 大昌商圈樹德高應大優質四房","note":"房仲：李小姐 (0936247617)"}]};
+
+    // Ensure all properties have images/rating fields
+    if (EMBEDDED_DATA && EMBEDDED_DATA.properties) {
+        EMBEDDED_DATA.properties.forEach(p => {
+            if (!p.images) p.images = [];
+            if (p.rating === undefined) p.rating = 0;
+        });
+        data = EMBEDDED_DATA;
+    }
+
+    // Load dark mode preference
+    if (localStorage.getItem('rental-dark') === '1') document.documentElement.classList.add('dark');
+
+    // ============ DAILY MOTIVATION ============
+    // ===== Tony Robbins 金句庫 =====
+    const TONY_QUOTES = [
+        '卓越只比優秀高兩毫米，所有的一切就在那裡',
+        '不成長就是死亡，進步等於快樂',
+        '我一定會找到方法，或者我會他媽的創造方法',
+        '安於現狀會讓你內心生病',
+        '最重要的投資，就是投資自己',
+        '你在未來追尋的一切，其實已經在你裡面了',
+        '生命是為你而發生，不是對你發生',
+        '你的人生品質，取決於你願意承受多少不舒服',
+        '改變發生在一瞬間，不是準備好才改變，而是決定了就改變',
+        '你的決定，而不是你的條件，決定了你的命運',
+        '在你最黑暗的時刻，才會發現自己最大的力量',
+        '提高你的標準，你的人生就會改變',
+        '痛苦是暫時的，放棄才是永遠的',
+        '成功的秘密很簡單：找到方法為別人創造更多價值',
+        '不要等到恐懼消失才行動，帶著恐懼前進',
+        '你把注意力放在哪裡，能量就流向哪裡',
+        '所有的改變，都始於你對自己說的那句「夠了」',
+        '快樂不是得到更多，而是成為更多',
+        '你的身體狀態決定你的情緒狀態',
+        '人們高估一年能做的事，卻低估十年能做的事',
+    ];
+
+    // ===== 每日金句（Tony + 找房鼓勵交替）=====
+    const MOTIVATIONS = [
+        { text: '每一次看房，都是離幸福之莊更近一步', sub: '莊家的好日子，就在前方等著你們' },
+        { text: TONY_QUOTES[0], sub: '— Tony Robbins ✦ 你已經很接近了' },
+        { text: '屬於莊家的溫暖小窩，宇宙已經在安排了', sub: '相信時機，好房子不會缺席' },
+        { text: TONY_QUOTES[1], sub: '— Tony Robbins ✦ 每一間新物件都是成長' },
+        { text: '每一間不合適的，都在把你推向那間對的', sub: '篩選不是浪費時間，是在靠近幸福' },
+        { text: TONY_QUOTES[2], sub: '— Tony Robbins ✦ 莊家人的精神' },
+        { text: '幸福之莊 2.0 正在載入中...進度條已經過半了！', sub: '耐心等待，驚喜總在不經意間到來' },
+        { text: TONY_QUOTES[5], sub: '— Tony Robbins ✦ 相信自己值得擁有好房子' },
+        { text: '今天也是離夢想之家更近的一天', sub: '一步一步，幸福之莊就在轉角' },
+        { text: TONY_QUOTES[6], sub: '— Tony Robbins ✦ 每一通電話都是禮物' },
+        { text: '你的認真和堅持，家人都看在眼裡', sub: '這個家，因為有你而完整' },
+        { text: TONY_QUOTES[9], sub: '— Tony Robbins ✦ 你的決定正在改變命運' },
+        { text: '好房子就像好緣分，時機到了就是你的', sub: '莊家的幸運，正在路上' },
+        { text: TONY_QUOTES[11], sub: '— Tony Robbins ✦ 不將就，才能遇見最好的' },
+        { text: '想像一下：鑰匙轉動，門打開，這就是我們的家', sub: '那一天，很快就會到來' },
+        { text: TONY_QUOTES[15], sub: '— Tony Robbins ✦ 專注在理想的家，它就會靠近' },
+        { text: '你不是在找房子，你是在找一個讓笑聲迴盪的地方', sub: '那個地方，正在等著被你發現' },
+        { text: TONY_QUOTES[4], sub: '— Tony Robbins ✦ 投資在找房上的時間，都是值得的' },
+        { text: '宇宙收到莊家的訂單了，正在加急處理中', sub: '預計交付時間：比你想的更快' },
+        { text: TONY_QUOTES[17], sub: '— Tony Robbins ✦ 找房的過程讓你成為更好的自己' },
+    ];
+
+    // ===== 互動打氣句（散落在各處）=====
+    const ACTION_QUOTES = [
+        '又前進了一步！' + TONY_QUOTES[1].split('，')[1],
+        'Tony 說：' + TONY_QUOTES[11],
+        '莊家加油！' + TONY_QUOTES[0].split('，')[0],
+        TONY_QUOTES[2].split('，')[0] + '！',
+        '你在為家人做最棒的事 ✦',
+        TONY_QUOTES[6].split('，')[0] + ' ✦',
+        '距離幸福之莊又近了一點 ✦',
+        TONY_QUOTES[15].split('，')[0] + ' ✦',
+    ];
+    function randomQuote() { return ACTION_QUOTES[Math.floor(Math.random() * ACTION_QUOTES.length)]; }
+
+    // ===== 搜尋框 placeholder 隨機 Tony 名言 =====
+    const SEARCH_HINTS = [
+        '🔍 搜尋地址、標題、格局、來源...',
+        '🔍 ' + TONY_QUOTES[0].split('，')[0] + '... 搜尋中',
+        '🔍 搜尋你的幸福之莊...',
+        '🔍 ' + TONY_QUOTES[15].split('，')[0] + '... 搜尋房源',
+        '🔍 找到方法，或者創造方法... 搜尋中',
+    ];
+    const searchBox = document.getElementById('searchInput');
+    searchBox.placeholder = SEARCH_HINTS[Math.floor(Math.random() * SEARCH_HINTS.length)];
+
+    function showMotivation() {
+        const now = new Date();
+        const start = new Date(now.getFullYear(), 0, 0);
+        const dayOfYear = Math.floor((now - start) / 86400000);
+        const idx = dayOfYear % MOTIVATIONS.length;
+        const m = MOTIVATIONS[idx];
+        document.getElementById('motivationText').textContent = '「' + m.text + '」';
+        document.getElementById('motivationSub').textContent = m.sub;
+    }
+    showMotivation();
+
+    // Footer: subtle Tony quote that changes each page load
+    document.getElementById('pageFooter').textContent = '✦ ' + TONY_QUOTES[Math.floor(Math.random() * TONY_QUOTES.length)] + ' — T.R.';
+
+    renderAll();
+
+    // ============ RENDER ============
+    function renderAll() {
+        updateStats();
+        renderFilters();
+        renderList();
+        updateCompareBar();
+        checkUnsaved();
+    }
+
+    function updateStats() {
+        const props = data.properties;
+        const prices = props.filter(p => p.price != null).map(p => p.price);
+        const bar = document.getElementById('statsBar');
+        const avgP = prices.length ? Math.round(prices.reduce((a,b)=>a+b,0)/prices.length) : 0;
+        const minP = prices.length ? Math.min(...prices) : 0;
+        const maxP = prices.length ? Math.max(...prices) : 0;
+        bar.innerHTML = `
+            <div class="stat-card"><div class="stat-number">${props.length}</div><div class="stat-label">全部物件</div></div>
+            <div class="stat-card"><div class="stat-number">${props.filter(p=>p.status==='pending').length}</div><div class="stat-label">待聯繫</div></div>
+            <div class="stat-card"><div class="stat-number">${props.filter(p=>p.status==='contacted').length}</div><div class="stat-label">已聯繫</div></div>
+            <div class="stat-card"><div class="stat-number">${avgP ? avgP.toLocaleString() : '-'}</div><div class="stat-label">平均租金</div></div>
+            <div class="stat-card"><div class="stat-number" style="font-size:1.1rem">${prices.length ? minP.toLocaleString()+'~'+maxP.toLocaleString() : '-'}</div><div class="stat-label">租金範圍</div></div>
+        `;
+        data.priceStats = { minPrice: minP, maxPrice: maxP, averagePrice: avgP, countWithPrice: prices.length };
+        data.meta.totalProperties = props.length;
+    }
+
+    function renderFilters() {
+        const props = data.properties;
+        const counts = { all: props.length, pending: 0, contacted: 0, rejected: 0, approved: 0 };
+        props.forEach(p => { if (counts[p.status] !== undefined) counts[p.status]++; });
+        const labels = { all:'全部', pending:'⏳ 待聯繫', contacted:'📞 已聯繫', rejected:'❌ 已婉拒', approved:'💛 列入考慮' };
+        document.getElementById('filterBar').innerHTML = Object.entries(labels).map(([k,v]) =>
+            `<button class="filter ${currentFilter===k?'active':''}" onclick="setFilter('${k}',this)">${v}<span class="cnt">${counts[k]}</span></button>`
+        ).join('');
+    }
+
+
+    function getDaysSinceContact(p) {
+        if (!p.contactTime) return null;
+        const d = new Date(p.contactTime.replace(' ','T'));
+        return Math.floor((Date.now() - d.getTime()) / 86400000);
+    }
+
+    function isOverdue(p) {
+        if (p.status !== 'contacted') return false;
+        const days = getDaysSinceContact(p);
+        return days !== null && days >= 3;
+    }
+
+    function renderStars(rating, id) {
+        let s = '';
+        for (let i = 1; i <= 5; i++) {
+            s += `<span onclick="event.stopPropagation();quickRate(${id},${i})" style="cursor:pointer">${i <= rating ? '★' : '☆'}</span>`;
+        }
+        return s;
+    }
+
+    function renderList() {
+        const query = (document.getElementById('searchInput').value || '').toLowerCase();
+        const sortVal = document.getElementById('sortSelect').value;
+        let list = data.properties.filter(p => {
+            if (currentFilter !== 'all' && p.status !== currentFilter) return false;
+            if (query) {
+                const s = [p.title, p.address, p.rooms, p.source, ...(p.features||[]), p.notes||'', p.priceNote||''].join(' ').toLowerCase();
+                return s.includes(query);
+            }
+            return true;
+        });
+
+        // Sort
+        const [field, dir] = sortVal.split('-');
+        list.sort((a, b) => {
+            let va, vb;
+            if (field === 'rating') { va = a.rating || 0; vb = b.rating || 0; }
+            else { va = a[field]; vb = b[field]; }
+            if (va == null) va = dir === 'asc' ? Infinity : -Infinity;
+            if (vb == null) vb = dir === 'asc' ? Infinity : -Infinity;
+            return dir === 'asc' ? va - vb : vb - va;
+        });
+
+        const container = document.getElementById('propertiesList');
+        if (list.length === 0) {
+            container.innerHTML = `<div class="empty"><div class="empty-icon">🏡</div><p>沒有符合條件的物件</p><p style="margin-top:12px;font-style:italic;opacity:0.7;font-size:0.9rem">「${TONY_QUOTES[Math.floor(Math.random()*TONY_QUOTES.length)]}」<br><small>— Tony Robbins</small></p></div>`;
+            return;
+        }
+
+        const statusLabels = { pending:'⏳ 待聯繫', contacted:'📞 已聯繫', rejected:'❌ 已婉拒', approved:'💛 列入考慮' };
+
+        container.innerHTML = list.map(p => {
+            const overdue = isOverdue(p);
+            const logs = data.contactLogs.filter(l => l.propertyId === p.id);
+            const imgs = p.images || [];
+            const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(p.address)}`;
+
+            return `
+            <div class="property">
+                <input type="checkbox" class="checkbox-compare" ${compareSet.has(p.id)?'checked':''} onchange="toggleCompare(${p.id}, this.checked)" title="勾選比較">
+                <div class="property-img-section" onclick="openLightbox(${p.id})">
+                    ${imgs.length > 0
+                        ? `<img src="${esc(imgs[0])}" alt="${esc(p.title)}" loading="lazy" onerror="this.style.display='none'">`
+                        : `<div class="property-img-placeholder" onclick="event.stopPropagation();fetchImages(${p.id})"><span class="icon">📷</span><span>${serverMode ? '點擊自動抓取照片' : '尚無照片'}</span></div>`}
+                    ${imgs.length > 1 ? `<span class="img-count">📷 ${imgs.length}</span>` : ''}
+                </div>
+                <div class="property-body">
+                    <div class="property-header">
+                        <div class="property-title-row">
+                            <span class="property-id">#${p.id}</span>
+                            <span class="property-title">${esc(p.title)}</span>
+                        </div>
+                        <div class="property-price-box">
+                            <div class="property-price">${p.price != null ? '💰 '+p.price.toLocaleString()+'元/月' : '💬 '+esc(p.priceNote||'洽談中')}</div>
+                        </div>
+                    </div>
+                    <div class="property-address">
+                        📍 ${esc(p.address)}
+                        <a href="${mapUrl}" target="_blank" rel="noopener" title="在 Google Maps 查看">🗺️ 地圖</a>
+                    </div>
+                    <div class="property-details">
+                        <div class="detail"><div class="detail-label">格局</div><div class="detail-value">🛏️ ${esc(p.rooms)}</div></div>
+                        <div class="detail"><div class="detail-label">坪數</div><div class="detail-value">📐 ${p.area ? p.area+' 坪' : '-'}</div></div>
+                        <div class="detail"><div class="detail-label">來源</div><div class="detail-value">🏷️ ${esc(p.source)}</div></div>
+                        <div class="detail"><div class="detail-label">評分</div><div class="detail-value property-rating">${renderStars(p.rating||0, p.id)}</div></div>
+                    </div>
+                    <div class="property-features">
+                        ${(p.features||[]).map(f=>`<span class="feature">${esc(f)}</span>`).join('')}
+                    </div>
+                    <div class="property-footer">
+                        <div class="footer-left">
+                            <span class="status status-${p.status}">${statusLabels[p.status]||p.status}</span>
+                            ${overdue ? `<span class="overdue-badge">⚠️ 超過3天未跟進</span>` : ''}
+                            ${p.sourceUrl ? `<a class="source-link" href="${esc(p.sourceUrl)}" target="_blank" rel="noopener">🔗 原始</a>` : ''}
+                        </div>
+                        <div class="property-actions">
+                            <button class="btn btn-sm btn-outline" onclick="openContactModal(${p.id})">📞</button>
+                            <button class="btn btn-sm btn-outline" onclick="editProperty(${p.id})">✏️</button>
+                            <button class="btn btn-sm btn-danger" onclick="deleteProperty(${p.id})">🗑️</button>
+                        </div>
+                    </div>
+                    ${p.notes ? `<div class="notes"><div class="notes-title">📝 聯絡筆記</div><div class="notes-content">${esc(p.notes)}</div></div>` : ''}
+                    ${logs.length ? `<div class="notes" style="border-left-color:var(--contacted-text);margin-top:6px">
+                        <div class="notes-title">📋 聯絡紀錄（${logs.length}）</div>
+                        ${logs.map(l=>`<div class="notes-content" style="margin-bottom:4px">
+                            <strong>${esc(l.contactTime)}</strong> — ${esc(l.method)}<br>
+                            ${esc(l.result)}${l.nextAction?'<br>▸ 下一步：'+esc(l.nextAction):''}
+                        </div>`).join('<hr style="border:none;border-top:1px solid var(--border);margin:4px 0">')}
+                    </div>` : ''}
+                </div>
+            </div>`;
+        }).join('');
+    }
+
+    // ============ FILTER / VIEW ============
+    function setFilter(s, btn) {
+        currentFilter = s;
+        document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+        if (btn) btn.classList.add('active');
+        renderList();
+    }
+    function setView(v) {
+        currentView = v;
+        const el = document.getElementById('propertiesList');
+        el.classList.toggle('grid-view', v === 'grid');
+        document.getElementById('viewGrid').classList.toggle('active', v === 'grid');
+        document.getElementById('viewList').classList.toggle('active', v === 'list');
+    }
+
+    // ============ COMPARE ============
+    function toggleCompare(id, checked) {
+        if (checked) { if (compareSet.size >= 4) { toast('最多比較 4 間','warning'); return; } compareSet.add(id); }
+        else compareSet.delete(id);
+        updateCompareBar();
+    }
+    function updateCompareBar() {
+        const bar = document.getElementById('compareBar');
+        const chips = document.getElementById('compareChips');
+        bar.classList.toggle('show', compareSet.size >= 2);
+        chips.innerHTML = [...compareSet].map(id => {
+            const p = data.properties.find(x=>x.id===id);
+            return p ? `<span class="compare-chip">${esc(p.title)} <span class="remove" onclick="toggleCompare(${id},false);renderList()">✕</span></span>` : '';
+        }).join('');
+    }
+    function clearCompare() { compareSet.clear(); updateCompareBar(); renderList(); }
+    function showCompare() {
+        const ids = [...compareSet];
+        const props = ids.map(id => data.properties.find(x=>x.id===id)).filter(Boolean);
+        if (props.length < 2) return;
+
+        const rows = [
+            ['標題', p => esc(p.title)],
+            ['月租金', p => p.price != null ? p.price.toLocaleString()+'元' : '洽談中'],
+            ['坪數', p => p.area ? p.area+'坪' : '-'],
+            ['格局', p => esc(p.rooms)],
+            ['地址', p => esc(p.address)],
+            ['特色', p => (p.features||[]).join(', ')],
+            ['來源', p => esc(p.source)],
+            ['狀態', p => ({pending:'待聯繫',contacted:'已聯繫',rejected:'已婉拒',approved:'列入考慮'})[p.status]],
+            ['評分', p => p.rating ? '★'.repeat(p.rating)+'☆'.repeat(5-p.rating) : '未評分'],
+        ];
+
+        // Find best values
+        const prices = props.map(p=>p.price).filter(Boolean);
+        const minPrice = prices.length ? Math.min(...prices) : null;
+        const table = document.getElementById('compareTable');
+        table.innerHTML = `<tr><th>項目</th>${props.map(p=>`<th>${esc(p.title)}</th>`).join('')}</tr>`
+            + rows.map(([label, fn]) => {
+                return `<tr><td style="font-weight:600;color:var(--text-secondary)">${label}</td>${props.map(p => {
+                    let cls = '';
+                    if (label==='月租金' && p.price===minPrice) cls='compare-best';
+                    return `<td class="${cls}">${fn(p)}</td>`;
+                }).join('')}</tr>`;
+            }).join('');
+        document.getElementById('compareOverlay').classList.add('show');
+    }
+    function closeCompare() { document.getElementById('compareOverlay').classList.remove('show'); }
+
+    // ============ CRUD ============
+    function openModal(id) {
+        formImages = [];
+        document.getElementById('modalTitle').textContent = id ? '編輯房源' : '新增房源';
+        document.getElementById('editId').value = id || '';
+        if (id) {
+            const p = data.properties.find(x=>x.id===id);
+            if (!p) return;
+            document.getElementById('fTitle').value = p.title||'';
+            document.getElementById('fAddress').value = p.address||'';
+            document.getElementById('fPrice').value = p.price??'';
+            document.getElementById('fPriceNote').value = p.priceNote||'';
+            document.getElementById('fRooms').value = p.rooms||'';
+            document.getElementById('fArea').value = p.area??'';
+            document.getElementById('fFeatures').value = (p.features||[]).join(', ');
+            document.getElementById('fSource').value = p.source||'樂屋網';
+            document.getElementById('fStatus').value = p.status||'pending';
+            document.getElementById('fUrl').value = p.sourceUrl||'';
+            document.getElementById('fNotes').value = p.notes||'';
+            document.getElementById('fRating').value = p.rating||0;
+            formImages = [...(p.images||[])];
+            setFormRating(p.rating||0);
+        } else {
+            ['fTitle','fAddress','fPrice','fPriceNote','fRooms','fArea','fFeatures','fUrl','fNotes'].forEach(i=>document.getElementById(i).value='');
+            document.getElementById('fSource').value='樂屋網';
+            document.getElementById('fStatus').value='pending';
+            document.getElementById('fRating').value=0;
+            setFormRating(0);
+        }
+        renderFormImages();
+        document.getElementById('modalOverlay').classList.add('show');
+    }
+    function closeModal() { document.getElementById('modalOverlay').classList.remove('show'); }
+
+    function setFormRating(n) {
+        document.getElementById('fRating').value = n;
+        const stars = document.getElementById('fRatingStars').children;
+        for (let i = 0; i < 5; i++) stars[i].textContent = i < n ? '★' : '☆';
+    }
+
+    function renderFormImages() {
+        const list = document.getElementById('imgPreviewList');
+        const hint = document.getElementById('imgUploadHint');
+        hint.style.display = formImages.length ? 'none' : 'block';
+        list.innerHTML = formImages.map((src, i) =>
+            `<span style="position:relative;display:inline-block">
+                <img class="img-preview-thumb" src="${esc(src)}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><text y=%2235%22 x=%2215%22 font-size=%2230%22>🖼️</text></svg>'">
+                <button class="img-remove-btn" onclick="event.stopPropagation();removeFormImage(${i})">✕</button>
+            </span>`
+        ).join('');
+    }
+    function removeFormImage(i) { formImages.splice(i, 1); renderFormImages(); }
+
+    function addImgUrl() {
+        const input = document.getElementById('fImgUrl');
+        const url = input.value.trim();
+        if (url) { formImages.push(url); input.value = ''; renderFormImages(); }
+    }
+
+    function handleImgFiles(event) {
+        const files = event.target.files;
+        for (const file of files) {
+            const reader = new FileReader();
+            reader.onload = e => { formImages.push(e.target.result); renderFormImages(); };
+            reader.readAsDataURL(file);
+        }
+        event.target.value = '';
+    }
+
+    function handleImgDrop(event) {
+        event.preventDefault();
+        event.currentTarget.style.borderColor = '';
+        const files = event.dataTransfer.files;
+        for (const file of files) {
+            if (!file.type.startsWith('image/')) continue;
+            const reader = new FileReader();
+            reader.onload = e => { formImages.push(e.target.result); renderFormImages(); };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function saveProperty() {
+        const title = document.getElementById('fTitle').value.trim();
+        const address = document.getElementById('fAddress').value.trim();
+        const rooms = document.getElementById('fRooms').value.trim();
+        if (!title || !address || !rooms) { toast('請填寫標題、地址、格局','error'); return; }
+
+        const priceVal = document.getElementById('fPrice').value;
+        const areaVal = document.getElementById('fArea').value;
+        const editId = document.getElementById('editId').value;
+
+        const prop = {
+            title, address,
+            price: priceVal ? Number(priceVal) : null,
+            priceNote: document.getElementById('fPriceNote').value.trim(),
+            rooms,
+            area: areaVal ? Number(areaVal) : null,
+            areaUnit: areaVal ? '坪' : '',
+            features: document.getElementById('fFeatures').value.split(/[,，]/).map(s=>s.trim()).filter(Boolean),
+            source: document.getElementById('fSource').value,
+            sourceUrl: document.getElementById('fUrl').value.trim(),
+            status: document.getElementById('fStatus').value,
+            notes: document.getElementById('fNotes').value.trim(),
+            images: [...formImages],
+            rating: Number(document.getElementById('fRating').value) || 0,
+        };
+
+        if (editId) {
+            const idx = data.properties.findIndex(x=>x.id===Number(editId));
+            if (idx >= 0) {
+                const old = data.properties[idx];
+                if (prop.status === 'contacted' && old.status !== 'contacted') prop.contactTime = now();
+                else prop.contactTime = old.contactTime || '';
+                data.properties[idx] = { ...old, ...prop };
+                toast('已更新房源 ✦ ' + randomQuote(),'success');
+            }
+        } else {
+            const maxId = data.properties.reduce((m,p)=>Math.max(m,p.id),0);
+            prop.id = maxId + 1;
+            prop.contactTime = '';
+            data.properties.push(prop);
+            // Check duplicates
+            checkDuplicate(prop);
+            toast('已新增房源 ✦ ' + randomQuote(),'success');
+        }
+        markChanged();
+        closeModal();
+        renderAll();
+    }
+
+    function checkDuplicate(newProp) {
+        const dupes = data.properties.filter(p =>
+            p.id !== newProp.id && (
+                (p.address && newProp.address && p.address === newProp.address) ||
+                (p.sourceUrl && newProp.sourceUrl && p.sourceUrl === newProp.sourceUrl)
+            )
+        );
+        if (dupes.length) {
+            setTimeout(() => toast(`⚠️ 可能重複：與 #${dupes[0].id} ${dupes[0].title} 相似`, 'warning'), 800);
+        }
+    }
+
+    function editProperty(id) { openModal(id); }
+
+    function deleteProperty(id) {
+        const p = data.properties.find(x=>x.id===id);
+        if (!p || !confirm(`確定要刪除「${p.title}」？`)) return;
+        data.properties = data.properties.filter(x=>x.id!==id);
+        data.contactLogs = data.contactLogs.filter(l=>l.propertyId!==id);
+        compareSet.delete(id);
+        markChanged();
+        toast('已刪除','success');
+        renderAll();
+    }
+
+    function quickRate(id, rating) {
+        const p = data.properties.find(x=>x.id===id);
+        if (!p) return;
+        p.rating = (p.rating === rating) ? 0 : rating;
+        markChanged();
+        renderList();
+    }
+
+    // ============ AUTO-FETCH IMAGES ============
+    async function fetchImages(id) {
+        const p = data.properties.find(x=>x.id===id);
+        if (!p || !p.sourceUrl) { toast('沒有來源連結','error'); return; }
+        if (!serverMode) { toast('需要啟動伺服器才能自動抓圖','warning'); return; }
+        toast('🖼️ 正在抓取照片...','');
+        try {
+            const res = await fetch(API_BASE + '/api/scrape-images?url=' + encodeURIComponent(p.sourceUrl));
+            const result = await res.json();
+            if (result.images && result.images.length > 0) {
+                p.images = result.images;
+                markChanged();
+                renderAll();
+                toast(`已抓取 ${result.images.length} 張照片`, 'success');
+            } else {
+                toast('未找到照片（該網站可能需要瀏覽器抓取）','warning');
+            }
+        } catch { toast('抓取失敗，請確認伺服器已啟動','error'); }
+    }
+
+    async function fetchAllImages() {
+        if (!serverMode) { toast('需要啟動伺服器才能批量抓圖','warning'); return; }
+        const noImg = data.properties.filter(p => (!p.images || p.images.length === 0) && p.sourceUrl);
+        if (noImg.length === 0) { toast('所有物件都已有照片','success'); return; }
+        toast(`🖼️ 開始抓取 ${noImg.length} 間的照片...`,'');
+        let count = 0;
+        for (const p of noImg) {
+            try {
+                const res = await fetch(API_BASE + '/api/scrape-images?url=' + encodeURIComponent(p.sourceUrl));
+                const result = await res.json();
+                if (result.images && result.images.length > 0) {
+                    p.images = result.images;
+                    count++;
+                }
+            } catch {}
+        }
+        if (count > 0) { markChanged(); renderAll(); }
+        toast(`完成！${count} 間成功抓取照片`, 'success');
+    }
+
+    // ============ CONTACT LOG ============
+    function openContactModal(id) {
+        document.getElementById('contactPropertyId').value = id;
+        document.getElementById('cResult').value = '';
+        document.getElementById('cNextAction').value = '';
+        document.getElementById('cMethod').value = '電話聯繫';
+        document.getElementById('cStatus').value = 'contacted';
+        document.getElementById('contactModalOverlay').classList.add('show');
+    }
+    function closeContactModal() { document.getElementById('contactModalOverlay').classList.remove('show'); }
+
+    function saveContactLog() {
+        const id = Number(document.getElementById('contactPropertyId').value);
+        const result = document.getElementById('cResult').value.trim();
+        if (!result) { toast('請填寫聯絡結果','error'); return; }
+        const p = data.properties.find(x=>x.id===id);
+        if (!p) return;
+        const log = {
+            propertyId: id, propertyTitle: p.title, contactTime: now(),
+            method: document.getElementById('cMethod').value,
+            result,
+            nextAction: document.getElementById('cNextAction').value.trim()
+        };
+        data.contactLogs.push(log);
+        p.status = document.getElementById('cStatus').value;
+        p.contactTime = log.contactTime;
+        p.notes = (p.notes ? p.notes+'\n' : '') + `${log.contactTime} ${log.method}：${log.result}${log.nextAction ? '（下一步：'+log.nextAction+'）' : ''}`;
+        markChanged();
+        closeContactModal();
+        toast('已新增聯絡紀錄 ✦ ' + randomQuote(),'success');
+        renderAll();
+    }
+
+    // ============ LIGHTBOX ============
+    function openLightbox(id) {
+        const p = data.properties.find(x=>x.id===id);
+        if (!p || !p.images || !p.images.length) return;
+        lightboxImages = p.images;
+        lightboxIdx = 0;
+        showLightboxImg();
+        document.getElementById('lightbox').classList.add('show');
+    }
+    function closeLightbox() { document.getElementById('lightbox').classList.remove('show'); }
+    function navLightbox(dir) {
+        lightboxIdx = (lightboxIdx + dir + lightboxImages.length) % lightboxImages.length;
+        showLightboxImg();
+    }
+    function showLightboxImg() {
+        document.getElementById('lightboxImg').src = lightboxImages[lightboxIdx];
+        document.getElementById('lightboxCounter').textContent = `${lightboxIdx+1} / ${lightboxImages.length}`;
+    }
+
+    // ============ JSON IMPORT/EXPORT ============
+    function loadJSON(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = e => {
+            try {
+                const parsed = JSON.parse(e.target.result);
+                if (parsed.properties && Array.isArray(parsed.properties)) {
+                    parsed.properties.forEach(p => { if (!p.images) p.images=[]; if (p.rating===undefined) p.rating=0; });
+                    if (!parsed.contactLogs) parsed.contactLogs = [];
+                    if (!parsed.calendarEvents) parsed.calendarEvents = [];
+                    if (!parsed.priceStats) parsed.priceStats = {};
+                    if (!parsed.meta) parsed.meta = { title:"租房追蹤資料" };
+                    data = parsed;
+                    unsavedChanges = 0;
+                    renderAll();
+                    toast(`已載入 ${data.properties.length} 筆房源`,'success');
+                } else toast('JSON 格式不正確','error');
+            } catch (err) { toast('JSON 解析失敗','error'); }
+        };
+        reader.readAsText(file);
+        event.target.value = '';
+    }
+
+    function exportJSON() {
+        data.meta.lastUpdated = now();
+        updateStats();
+        const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = '租房追蹤資料.json';
+        a.click();
+        URL.revokeObjectURL(a.href);
+        unsavedChanges = 0;
+        checkUnsaved();
+        toast('已匯出 JSON','success');
+    }
+
+    // ============ DARK MODE ============
+    function toggleDark() {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem('rental-dark', isDark ? '1' : '0');
+        document.getElementById('darkBtn').textContent = isDark ? '☀️ 淺色' : '🌙 深色';
+    }
+    // Init dark button text
+    if (document.documentElement.classList.contains('dark')) document.getElementById('darkBtn').textContent = '☀️ 淺色';
+
+    // ============ AUTO-SYNC (local server + GitHub Pages) ============
+    const API_BASE = 'http://localhost:5566';
+    const isGitHubPages = location.hostname.includes('github.io');
+
+    // On GitHub Pages: fetch data.json from same origin
+    async function loadFromGitHub() {
+        try {
+            const res = await fetch('./data.json?t=' + Date.now(), { signal: AbortSignal.timeout(5000) });
+            if (res.ok) {
+                const ghData = await res.json();
+                if (ghData.properties) {
+                    ghData.properties.forEach(p => { if (!p.images) p.images=[]; if (p.rating===undefined) p.rating=0; });
+                    if (!ghData.contactLogs) ghData.contactLogs = [];
+                    if (!ghData.calendarEvents) ghData.calendarEvents = [];
+                    data = ghData;
+                    renderAll();
+                    document.getElementById('syncStatus').className = 'sync-status sync-ok';
+                    document.getElementById('syncStatus').textContent = '🟢 線上模式';
+                }
+            }
+        } catch {}
+    }
+    if (isGitHubPages) loadFromGitHub();
+
+    async function checkServer() {
+        if (isGitHubPages) {
+            // On GitHub Pages, periodically reload data.json
+            await loadFromGitHub();
+            return;
+        }
+        try {
+            const res = await fetch(API_BASE + '/api/ping', { signal: AbortSignal.timeout(1500) });
+            if (res.ok) {
+                const wasOffline = !serverMode;
+                serverMode = true;
+                document.getElementById('syncStatus').className = 'sync-status sync-ok';
+                document.getElementById('syncStatus').textContent = '🟢 同步模式';
+                if (wasOffline) {
+                    await loadFromServer(true);
+                } else {
+                    await pollForChanges();
+                }
+                return true;
+            }
+        } catch {}
+        serverMode = false;
+        document.getElementById('syncStatus').className = 'sync-status sync-off';
+        document.getElementById('syncStatus').textContent = '⚡ 離線模式';
+        return false;
+    }
+
+    async function loadFromServer(force) {
+        try {
+            const res = await fetch(API_BASE + '/api/data');
+            if (res.ok) {
+                const serverData = await res.json();
+                if (serverData.properties) {
+                    serverData.properties.forEach(p => { if (!p.images) p.images=[]; if (p.rating===undefined) p.rating=0; });
+                    if (!serverData.contactLogs) serverData.contactLogs = [];
+                    if (!serverData.calendarEvents) serverData.calendarEvents = [];
+                    lastKnownUpdate = (serverData.meta && serverData.meta.lastUpdated) || '';
+                    data = serverData;
+                    unsavedChanges = 0;
+                    renderAll();
+                }
+            }
+        } catch {}
+    }
+
+    async function pollForChanges() {
+        // Quick check: fetch data and compare lastUpdated
+        try {
+            const res = await fetch(API_BASE + '/api/data', { signal: AbortSignal.timeout(3000) });
+            if (!res.ok) return;
+            const serverData = await res.json();
+            const serverUpdate = (serverData.meta && serverData.meta.lastUpdated) || '';
+
+            // If server data is newer than what we last loaded AND we have no unsaved local changes
+            if (serverUpdate && serverUpdate !== lastKnownUpdate) {
+                if (unsavedChanges > 0) {
+                    // We have local edits — warn but don't overwrite
+                    document.getElementById('syncStatus').textContent = '🟡 伺服器有新資料（你有未存修改）';
+                    document.getElementById('syncStatus').className = 'sync-status sync-off';
+                } else {
+                    // Safe to update
+                    serverData.properties.forEach(p => { if (!p.images) p.images=[]; if (p.rating===undefined) p.rating=0; });
+                    if (!serverData.contactLogs) serverData.contactLogs = [];
+                    if (!serverData.calendarEvents) serverData.calendarEvents = [];
+                    const oldCount = data.properties.length;
+                    const newCount = serverData.properties.length;
+                    lastKnownUpdate = serverUpdate;
+                    data = serverData;
+                    renderAll();
+                    document.getElementById('syncStatus').textContent = '🟢 已同步 ' + serverUpdate.slice(11);
+                    if (newCount > oldCount) {
+                        toast(`📥 收到新房源！共 ${newCount} 筆（+${newCount - oldCount}）`, 'success');
+                    } else if (newCount === oldCount && serverUpdate !== lastKnownUpdate) {
+                        // Data changed but same count — probably a status update
+                    }
+                }
+            }
+        } catch {}
+    }
+
+    async function saveToServer() {
+        if (!serverMode) return false;
+        try {
+            data.meta.lastUpdated = now();
+            updateStats();
+            const res = await fetch(API_BASE + '/api/data', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data, null, 2)
+            });
+            if (res.ok) {
+                unsavedChanges = 0;
+                lastKnownUpdate = data.meta.lastUpdated; // mark our own write
+                checkUnsaved();
+                return true;
+            }
+        } catch {}
+        return false;
+    }
+
+    // Auto-save with debounce when server is available
+    function scheduleSave() {
+        if (!serverMode) return;
+        if (syncTimer) clearTimeout(syncTimer);
+        syncTimer = setTimeout(async () => {
+            const ok = await saveToServer();
+            if (ok) document.getElementById('syncStatus').textContent = '🟢 已同步 ' + now().slice(11);
+        }, 1500);
+    }
+
+    // Check server on load, then periodically
+    checkServer();
+    setInterval(checkServer, 5000); // 每 5 秒檢查伺服器是否有新資料
+
+    // ============ UNSAVED CHANGES ============
+    function markChanged() {
+        unsavedChanges++;
+        data.meta.lastUpdated = now();
+        checkUnsaved();
+        scheduleSave(); // auto-save if server available
+    }
+    function checkUnsaved() {
+        const badge = document.getElementById('unsavedBadge');
+        if (serverMode) { badge.style.display = 'none'; return; }
+        badge.style.display = unsavedChanges > 0 ? 'inline-block' : 'none';
+        badge.textContent = `${unsavedChanges} 筆未儲存`;
+        if (unsavedChanges >= 5) {
+            badge.style.background = '#e53935';
+            if (unsavedChanges === 5) toast('⚠️ 已修改 5 筆，建議匯出儲存','warning');
+        }
+    }
+
+    // ============ UTILS ============
+    function esc(s) { if (!s) return ''; const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+    function now() { const d=new Date(); return `${d.getFullYear()}-${S(d.getMonth()+1)}-${S(d.getDate())} ${S(d.getHours())}:${S(d.getMinutes())}`; }
+    function S(n) { return String(n).padStart(2,'0'); }
+    function toast(msg, type) {
+        const el=document.createElement('div');
+        el.className='toast'+(type?' '+type:'');
+        el.textContent=msg;
+        document.body.appendChild(el);
+        setTimeout(()=>el.remove(), 2800);
+    }
+
+    // ============ CALENDAR ============
+    let calYear, calMonth, calSelectedDate;
+    if (!data.calendarEvents) data.calendarEvents = [];
+
+    function initCal() {
+        const d = new Date();
+        calYear = d.getFullYear();
+        calMonth = d.getMonth();
+        calSelectedDate = formatDate(d);
+        document.getElementById('calDate').value = calSelectedDate;
+        renderCal();
+    }
+
+    function formatDate(d) {
+        return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    }
+
+    function toggleCalendar() {
+        const sb = document.getElementById('calSidebar');
+        sb.classList.toggle('open');
+        if (sb.classList.contains('open')) { initCal(); updateCalPropertySelect(); }
+    }
+
+    function calNav(dir) { calMonth += dir; if (calMonth>11){calMonth=0;calYear++;} if(calMonth<0){calMonth=11;calYear--;} renderCal(); }
+    function calToday() { const d=new Date(); calYear=d.getFullYear(); calMonth=d.getMonth(); calSelectedDate=formatDate(d); document.getElementById('calDate').value=calSelectedDate; renderCal(); }
+
+    function renderCal() {
+        const monthNames = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+        document.getElementById('calMonthLabel').textContent = `${calYear} 年 ${monthNames[calMonth]}`;
+
+        const grid = document.getElementById('calGrid');
+        const dows = ['日','一','二','三','四','五','六'];
+        let html = dows.map(d => `<div class="cal-dow">${d}</div>`).join('');
+
+        const firstDay = new Date(calYear, calMonth, 1).getDay();
+        const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+        const daysInPrev = new Date(calYear, calMonth, 0).getDate();
+        const todayStr = formatDate(new Date());
+
+        // Prev month fill
+        for (let i = firstDay - 1; i >= 0; i--) {
+            const day = daysInPrev - i;
+            html += `<div class="cal-day other-month">${day}</div>`;
+        }
+        // Current month
+        for (let d = 1; d <= daysInMonth; d++) {
+            const dateStr = `${calYear}-${String(calMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+            const isToday = dateStr === todayStr;
+            const isSelected = dateStr === calSelectedDate;
+            const hasEvent = data.calendarEvents.some(e => e.date === dateStr);
+            const cls = ['cal-day', isToday?'today':'', isSelected?'selected':'', hasEvent?'has-event':''].filter(Boolean).join(' ');
+            html += `<div class="${cls}" onclick="selectCalDate('${dateStr}')">${d}</div>`;
+        }
+        // Next month fill
+        const totalCells = firstDay + daysInMonth;
+        const remaining = (7 - totalCells % 7) % 7;
+        for (let i = 1; i <= remaining; i++) {
+            html += `<div class="cal-day other-month">${i}</div>`;
+        }
+        grid.innerHTML = html;
+        renderCalEvents();
+    }
+
+    function selectCalDate(dateStr) {
+        calSelectedDate = dateStr;
+        document.getElementById('calDate').value = dateStr;
+        renderCal();
+    }
+
+    function renderCalEvents() {
+        const evDiv = document.getElementById('calEvents');
+        const dayEvents = data.calendarEvents.filter(e => e.date === calSelectedDate).sort((a,b) => a.time.localeCompare(b.time));
+        const allUpcoming = data.calendarEvents.filter(e => e.date >= formatDate(new Date())).sort((a,b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time));
+
+        let html = '';
+        if (dayEvents.length) {
+            html += `<h4>📋 ${calSelectedDate} 的行程</h4>`;
+            html += dayEvents.map((e,i) => `
+                <div class="cal-event-item">
+                    <span class="cal-event-del" onclick="deleteCalEvent('${e.id}')">✕</span>
+                    <div class="cal-event-time">${e.time}</div>
+                    <div class="cal-event-title">${esc(e.propertyTitle || '看房')}</div>
+                    ${e.note ? `<div class="cal-event-note">${esc(e.note)}</div>` : ''}
+                </div>`).join('');
+        } else {
+            html += `<h4 style="opacity:0.5">📋 ${calSelectedDate} 沒有行程</h4>`;
+        }
+
+        if (allUpcoming.length) {
+            html += `<h4 style="margin-top:12px">🗓️ 近期行程（${allUpcoming.length}）</h4>`;
+            html += allUpcoming.slice(0, 5).map(e => `
+                <div class="cal-event-item" onclick="selectCalDate('${e.date}')" style="cursor:pointer">
+                    <div class="cal-event-time">${e.date} ${e.time}</div>
+                    <div class="cal-event-title">${esc(e.propertyTitle || '看房')}</div>
+                    ${e.note ? `<div class="cal-event-note">${esc(e.note)}</div>` : ''}
+                </div>`).join('');
+        }
+        evDiv.innerHTML = html;
+    }
+
+    function updateCalPropertySelect() {
+        const sel = document.getElementById('calProperty');
+        sel.innerHTML = '<option value="">選擇物件...</option>' +
+            data.properties.map(p => `<option value="${p.id}">${esc(p.title)} (${p.price ? p.price.toLocaleString()+'元' : '洽談中'})</option>`).join('');
+    }
+
+    function addCalEvent() {
+        const date = document.getElementById('calDate').value;
+        const time = document.getElementById('calTime').value;
+        if (!date || !time) { toast('請選擇日期和時間','error'); return; }
+        const propId = document.getElementById('calProperty').value;
+        const prop = propId ? data.properties.find(p => p.id === Number(propId)) : null;
+        const note = document.getElementById('calNote').value.trim();
+
+        const event = {
+            id: Date.now().toString(36),
+            date,
+            time,
+            propertyId: propId ? Number(propId) : null,
+            propertyTitle: prop ? prop.title : '看房行程',
+            note
+        };
+        data.calendarEvents.push(event);
+        document.getElementById('calNote').value = '';
+        calSelectedDate = date;
+        markChanged();
+        renderCal();
+        toast('已新增看房行程 ✦ ' + randomQuote(), 'success');
+    }
+
+    function deleteCalEvent(id) {
+        data.calendarEvents = data.calendarEvents.filter(e => e.id !== id);
+        markChanged();
+        renderCal();
+    }
+
+    // Keyboard
+    document.addEventListener('keydown', e => {
+        if (e.key==='Escape') { closeModal(); closeContactModal(); closeLightbox(); closeCompare(); document.getElementById('calSidebar').classList.remove('open'); }
+        if (e.key==='ArrowLeft' && document.getElementById('lightbox').classList.contains('show')) navLightbox(-1);
+        if (e.key==='ArrowRight' && document.getElementById('lightbox').classList.contains('show')) navLightbox(1);
+    });
+
+    // Warn before leaving with unsaved
+    window.addEventListener('beforeunload', e => {
+        if (unsavedChanges > 0) { e.preventDefault(); e.returnValue = ''; }
+    });
+    </script>
+</body>
+</html>
