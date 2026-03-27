@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-03-27 07:43",
+    "lastUpdated": "2026-03-27 09:23",
     "totalProperties": 13
   },
   "properties": [
@@ -639,6 +639,136 @@
         "https://img2.591.com.tw/house/2023/06/19/168715421238914703.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2023/06/19/168715421500925604.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2023/06/19/168715422638483001.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 14,
+      "title": "文山特區整棟透天稀有釋出便宜出租",
+      "address": "高雄市鳳山區鳳山區-文藝街162巷",
+      "price": 19800,
+      "priceNote": "",
+      "rooms": "3房3廳",
+      "area": "30坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20893742",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-27 發現",
+      "images": [
+        "https://img.youtube.com/vi/E4tPo5WWuIY/hqdefault.jpg",
+        "https://img1.591.com.tw/house/2022/07/26/165880552933090937.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2022/07/26/165880552933030035.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2022/07/26/165880552933019305.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2022/07/26/165880552933070239.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 15,
+      "title": "✨超大坪數🉑申請租屋補助",
+      "address": "高雄市苓雅區苓雅區-福建街361巷",
+      "price": 19000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "40坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20914952",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-27 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/03/24/177433596005935007.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/03/24/177433596034793304.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/03/24/177433596064182700.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/03/24/177433596079807408.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/03/24/177433596096106506.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 16,
+      "title": "近捷運信義國小站/精美公寓三房/寵物友善",
+      "address": "高雄市新興區新興區-仁愛一街157號",
+      "price": 22000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "25坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20919950",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-27 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/01/06/176768066723450806.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/06/176768066736958609.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/06/176768066740650201.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/06/176768066727026103.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/06/176768066745384809.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 17,
+      "title": "租-新崛江R9捷運高樓層超大商業住辦中心",
+      "address": "高雄市新興區新興區-五福二路147號",
+      "price": 20000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "30.5坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20881468",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-27 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/02/24/177189561290315301.png!510x400.png",
+        "https://img1.591.com.tw/house/2026/02/24/177189561286148708.png!510x400.png",
+        "https://img1.591.com.tw/house/2026/02/24/177189561294712406.png!510x400.png",
+        "https://img2.591.com.tw/house/2026/02/24/177189561266095902.png!510x400.png",
+        "https://img1.591.com.tw/house/2026/02/24/177189561324479508.png!510x400.png"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 18,
+      "title": "近文化中心3房空屋剛剛重新粉刷過喔!!",
+      "address": "高雄市新興區新興區-東海街26號",
+      "price": 12000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "21.7坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20926992",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-27 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/01/16/176852801831194803.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/16/176852801842496909.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/16/176852801846034201.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/16/176852801845657308.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/16/176852801852281807.jpg!510x400.jpg"
       ],
       "rating": 0
     }
