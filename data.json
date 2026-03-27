@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-03-27 09:23",
+    "lastUpdated": "2026-03-27 14:42",
     "totalProperties": 13
   },
   "properties": [
@@ -221,7 +221,7 @@
       "sourceUrl": "https://www.rakuya.com.tw/rent/rent_item?ehid=07a761324632339",
       "status": "approved",
       "contactTime": "2026-03-26 16:50",
-      "notes": "2026-03-26 16:50 聯繫房仲劉小姐 (0908-694899)，約今晚 8 點看房子，地址：左營區自由三路394巷50號九樓\n\n── 看房筆記（2026-03-26 20:00 實地看房）──\n• 離安上班很近\n• 樓下就有蝦皮店到店跟 7-Eleven\n• 汽車平面車位 $2,000/月\n• 可停 3 台摩托車（平面車位後方空間大，可再停 2 台 + 原本附 1 個機車位）\n• 三間房間都比目前的房間再大一點\n• 晚上七點多要追垃圾車\n• 可以接受雙租屋補助\n• 屋主是老師\n• 租金 $18,000 + 車位 $2,000 + 管理費 $2,380\n• 離自由市場很近，生活機能方便\n• 路口也有停車格",
+      "notes": "2026-03-26 16:50 聯繫房仲劉小姐 (0908-694899)，約今晚 8 點看房子，地址：左營區自由三路394巷50號九樓\n\n── 看房筆記（2026-03-26 20:00 實地看房）──\n• 樓下就有蝦皮店到店跟 7-Eleven\n• 汽車平面車位 $2,000/月\n• 可停 3 台摩托車（平面車位後方空間大，可再停 2 台 + 原本附 1 個機車位）\n• 三間房間都比目前的房間再大一點\n• 晚上七點多要追垃圾車\n• 可以接受雙租屋補助\n• 屋主是老師\n• 租金 $18,000 + 車位 $2,000 + 管理費 $2,380\n• 離自由市場很近，生活機能方便\n• 路口也有停車格",
       "images": [
         "https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_1_b.jpeg?1773141019",
         "https://static.rakuya.com.tw/r1/n233/1c/d6/32463233_2_b.jpeg?1773141019",
@@ -480,6 +480,46 @@
         "https://img2.591.com.tw/house/2022/12/18/167137283892282903.jpg!510x400.jpg"
       ],
       "rating": 0
+    },
+    {
+      "id": 14,
+      "title": "河堤國小旁全新整理3房平車",
+      "address": "高雄市（河堤國小旁）",
+      "price": 28000,
+      "priceNote": "",
+      "rooms": "3房",
+      "area": null,
+      "areaUnit": "坪",
+      "features": [
+        "有車位",
+        "全新整理",
+        "近河堤國小"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://www.591.com.tw/20283091",
+      "status": "pending",
+      "contactTime": "",
+      "notes": ""
+    },
+    {
+      "id": 15,
+      "title": "河堤三房附車位全新整理",
+      "address": "高雄市（河堤區域）",
+      "price": 26000,
+      "priceNote": "",
+      "rooms": "3房",
+      "area": null,
+      "areaUnit": "坪",
+      "features": [
+        "有車位",
+        "全新整理",
+        "近河堤"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://www.591.com.tw/20283090",
+      "status": "pending",
+      "contactTime": "",
+      "notes": ""
     }
   ],
   "contactLogs": [
@@ -514,9 +554,9 @@
   ],
   "priceStats": {
     "minPrice": 16000,
-    "maxPrice": 19000,
-    "averagePrice": 17636,
-    "countWithPrice": 11
+    "maxPrice": 28000,
+    "averagePrice": 19769,
+    "countWithPrice": 13
   },
   "calendarEvents": [
     {
@@ -770,6 +810,59 @@
         "https://img2.591.com.tw/house/2026/01/16/176852801845657308.jpg!510x400.jpg",
         "https://img1.591.com.tw/house/2026/01/16/176852801852281807.jpg!510x400.jpg"
       ],
+      "rating": 0
+    },
+    {
+      "id": 19,
+      "title": "(可養貓)苓雅區電梯華廈採光通風佳",
+      "address": "高雄市苓雅區永裕街29號",
+      "price": 22000,
+      "priceNote": "管理費另計 $1,500/月",
+      "rooms": "3房2廳2衛",
+      "area": "37.27坪",
+      "areaUnit": "坪",
+      "features": [
+        "電梯大廈",
+        "4F/7F",
+        "可養貓",
+        "採光通風佳",
+        "三陽台設計",
+        "近高雄市政府",
+        "近忠孝夜市"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20811838",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-27 發現",
+      "images": [],
+      "rating": 0
+    },
+    {
+      "id": 20,
+      "title": "生態園區捷運＃榮總＃簡約舒適＃車位＃租補＃無服務費",
+      "address": "高雄市左營區文自路",
+      "price": 20000,
+      "priceNote": "管理費另計 $2,660/月",
+      "rooms": "3房2廳2衛",
+      "area": "45.24坪",
+      "areaUnit": "坪",
+      "features": [
+        "電梯大樓",
+        "23F/23F高樓層",
+        "可租補",
+        "有機械車位",
+        "無服務費",
+        "近生態園區捷運站",
+        "近榮總",
+        "採光通風佳"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20792470",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-27 發現",
+      "images": [],
       "rating": 0
     }
   ]
