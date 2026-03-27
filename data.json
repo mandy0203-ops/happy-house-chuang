@@ -2,8 +2,8 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-03-27 14:42",
-    "totalProperties": 13
+    "lastUpdated": "2026-03-27 14:17",
+    "totalProperties": 15
   },
   "properties": [
     {
@@ -863,6 +863,32 @@
       "contactTime": "",
       "notes": "[自動監控] 2026-03-27 發現",
       "images": [],
+      "rating": 0
+    },
+    {
+      "id": 21,
+      "title": "道明中學正對面/3+1房1廳2陽台",
+      "address": "高雄市苓雅區苓雅區-建國一路",
+      "price": 11000,
+      "priceNote": "",
+      "rooms": "4房1廳",
+      "area": "29坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20745607",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-27 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/01/21/176897936248449909.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/21/176897938146271704.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/21/176897938842692105.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/21/176897939606065206.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/21/176897940917712905.jpg!510x400.jpg"
+      ],
       "rating": 0
     }
   ]
