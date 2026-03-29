@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-03-28 20:41",
+    "lastUpdated": "2026-03-29 09:25",
     "totalProperties": 12
   },
   "properties": [
@@ -767,6 +767,84 @@
         "https://img2.591.com.tw/house/2026/02/24/177189561294712406.png!510x400.png",
         "https://img2.591.com.tw/house/2026/02/24/177189561266095902.png!510x400.png",
         "https://img1.591.com.tw/house/2026/02/24/177189561324479508.png!510x400.png"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 9,
+      "title": "大明路巷內公寓五樓出租",
+      "address": "高雄市鳳山區鳳山區-大明路16巷4號",
+      "price": 16500,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "25坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20907038",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-29 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/03/23/177424281769114200.jpeg!510x400.jpeg",
+        "https://img1.591.com.tw/house/2026/03/23/177424281809500007.jpeg!510x400.jpeg",
+        "https://img1.591.com.tw/house/2026/03/23/177424281814262908.jpeg!510x400.jpeg",
+        "https://img2.591.com.tw/house/2026/03/23/177424281814815609.jpeg!510x400.jpeg",
+        "https://img2.591.com.tw/house/2026/03/23/177424281921632905.jpeg!510x400.jpeg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 10,
+      "title": "中崙社區二標優質電梯大樓住宅出租",
+      "address": "高雄市鳳山區鳳山區-中崙二路582巷",
+      "price": 15000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "36坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20910053",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-29 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2022/08/13/166039868816633627.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2022/08/13/166039868816693657.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2022/08/13/166039868816672572.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2022/08/13/166039868816710724.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2022/08/13/166039868816701339.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 11,
+      "title": "近文化中心3房空屋剛剛重新粉刷過喔!!",
+      "address": "高雄市新興區新興區-東海街26號",
+      "price": 12000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "21.7坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20926992",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-03-29 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/01/16/176852801831194803.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/16/176852801842496909.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/16/176852801846034201.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/16/176852801845657308.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/16/176852801852281807.jpg!510x400.jpg"
       ],
       "rating": 0
     }
