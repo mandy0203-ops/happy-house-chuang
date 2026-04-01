@@ -2,8 +2,8 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-01 09:23",
-    "totalProperties": 12
+    "lastUpdated": "2026-04-01 14:17",
+    "totalProperties": 8
   },
   "properties": [
     {
@@ -40,47 +40,6 @@
         "https://static.rakuya.com.tw/r2/n735/d1/35/33429735_34_b.jpeg?1773831784",
         "https://static.rakuya.com.tw/r2/n735/d1/35/33429735_35_b.jpeg?1773831784",
         "https://static.rakuya.com.tw/r2/n735/d1/35/33429735_36_b.jpeg?1773831784"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 2,
-      "title": "保泰路 - 芳鈞",
-      "address": "高雄市鳳山區保泰路",
-      "price": 18000,
-      "priceNote": "",
-      "rooms": "4房2廳2衛 + 3陽台1廚房",
-      "area": 57.12,
-      "areaUnit": "坪",
-      "features": [
-        "電梯大廈",
-        "五甲瑞隆商圈景觀"
-      ],
-      "source": "樂屋網",
-      "sourceUrl": "https://www.rakuya.com.tw/rent/rent_item?ehid=02ee83334452516",
-      "status": "contacted",
-      "contactTime": "2026-03-27 16:00",
-      "notes": "📅 看房時間：週日下午 4 點\n",
-      "images": [
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_1_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_2_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_3_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_4_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_5_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_6_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_7_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_8_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_9_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_10_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_11_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_12_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_13_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_14_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_15_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_16_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_17_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_18_b.jpeg?1774172207",
-        "https://static.rakuya.com.tw/r1/n251/e3/ba/33445251_19_b.jpeg?1774172207"
       ],
       "rating": 0
     },
@@ -270,69 +229,6 @@
       "rating": 0
     },
     {
-      "id": 12,
-      "title": "明仁路 - 中迪房屋大樂河堤正三房",
-      "address": "高雄市三民區明仁路",
-      "price": 17000,
-      "priceNote": "押金二個月",
-      "rooms": "3房1廳2衛",
-      "area": 32.63,
-      "areaUnit": "坪",
-      "features": [
-        "有電梯",
-        "近捷運",
-        "近商圈",
-        "可開伙",
-        "免服務費",
-        "社會住宅",
-        "租金補貼",
-        "可入籍"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20915798",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "河堤社區電梯三房空屋出租，一層兩戶一部電梯！鄰近大樂、台安醫院，生活機能便利。不可養寵物。管理費：1929元。",
-      "images": [
-        "https://img2.591.com.tw/house/2026/03/24/177434167826686801.jpg!1000x.water2.jpg",
-        "https://img2.591.com.tw/house/2026/03/24/177434167793170907.jpg!1000x.water2.jpg",
-        "https://img2.591.com.tw/house/2026/03/24/177434167802511001.jpg!1000x.water2.jpg",
-        "https://img2.591.com.tw/house/2024/01/11/170495675678942907.jpg!1000x.water2.jpg",
-        "https://img1.591.com.tw/house/2026/03/24/177434167802255109.jpg!1000x.water2.jpg",
-        "https://img1.591.com.tw/house/2026/03/24/177434167770697707.jpg!1000x.water2.jpg",
-        "https://img2.591.com.tw/house/2024/01/11/170495677306689302.jpg!1000x.water2.jpg",
-        "https://img2.591.com.tw/house/2024/01/11/170495675704666400.jpg!1000x.water2.jpg",
-        "https://img1.591.com.tw/house/2024/01/11/170495675682840606.jpg!1000x.water2.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 13,
-      "title": "文山特區典雅美四房",
-      "address": "高雄市鳳山區鳳山區-青年路二段588巷27號",
-      "price": 16000,
-      "priceNote": "",
-      "rooms": "4房2廳",
-      "area": "",
-      "areaUnit": "坪",
-      "features": [
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20876554",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-26 發現\n✅ 從監控佇列加入追蹤",
-      "images": [
-        "https://img2.591.com.tw/house/2022/12/18/167137284275698800.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2022/12/18/167137284662242608.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2022/12/18/167137284667187509.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2022/12/18/167137284351946407.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2022/12/18/167137283892282903.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
       "id": 14,
       "title": "✨超大坪數🉑申請租屋補助",
       "address": "高雄市苓雅區苓雅區-福建街361巷",
@@ -355,32 +251,6 @@
         "https://img1.591.com.tw/house/2026/03/24/177433596064182700.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/03/24/177433596079807408.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/03/24/177433596096106506.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 15,
-      "title": "★中山新城★正捷運鳳山國中~3房＋平車位",
-      "address": "高雄市鳳山區鳳山區-四維街",
-      "price": 18800,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": "46坪",
-      "areaUnit": "坪",
-      "features": [
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20940413",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-28 發現\n✅ 從監控佇列加入追蹤",
-      "images": [
-        "https://img2.591.com.tw/house/2023/05/17/168431748492473609.png!510x400.png",
-        "https://img1.591.com.tw/house/2023/05/10/168372416945165507.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2023/05/10/168372418651034105.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2023/05/10/168372419069715206.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2023/05/10/168372420367121305.jpg!510x400.jpg"
       ],
       "rating": 0
     },
@@ -431,21 +301,13 @@
       "nextAction": "今晚 8 點看房",
       "contactPerson": "劉小姐",
       "phone": "0908-694899"
-    },
-    {
-      "propertyId": 2,
-      "propertyTitle": "保泰路 - 芳鈞",
-      "contactTime": "2026-03-27 16:00",
-      "method": "預約看房",
-      "result": "約週日下午 4 點看房",
-      "nextAction": "週日下午 4 點看房"
     }
   ],
   "priceStats": {
     "minPrice": 16000,
     "maxPrice": 19000,
-    "averagePrice": 17709,
-    "countWithPrice": 11
+    "averagePrice": 17857,
+    "countWithPrice": 7
   },
   "calendarEvents": [
     {
@@ -546,379 +408,6 @@
   },
   "monitorQueue": [
     {
-      "id": 106,
-      "title": "🚩捷運信義國小站VS文化中心站🚩優質地段理想住所",
-      "address": "高雄市新興區民生一路",
-      "price": null,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 28.4,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20956601",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2026/03/30/177486005923402702.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/03/30/177486005861664709.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/03/30/177486005829690809.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 110,
-      "title": "一佳租賃🌳永豐瑞隆四房雙衛|前後陽台|採光佳|空間很大",
-      "address": "高雄市鳳山區新富路47號",
-      "price": 16000,
-      "priceNote": "",
-      "rooms": "4房1廳",
-      "area": 36.0,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20861476",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2026/03/15/177358253744195102.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/15/177358253740481303.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/03/15/177358253785864703.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 111,
-      "title": "一佳租賃🌳仲免|公寓二樓|家具齊全|採光佳|可申請租補|",
-      "address": "高雄市鳳山區和興街",
-      "price": 16000,
-      "priceNote": "",
-      "rooms": "3房1廳",
-      "area": 25.0,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20947444",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2026/03/29/177475273804505602.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/29/177475273824314507.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/29/177475273818013108.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 112,
-      "title": "近港灣核心地段/市中心/透天厝出租可租補/生活機能佳",
-      "address": "高雄市苓雅區昇平街139巷2弄",
-      "price": 18000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 17.1,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20955900",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2026/02/27/177219342053255202.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/02/27/177219352000491806.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/02/27/177219353025207904.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 113,
-      "title": "五甲輕屋齡大樓✔️高樓層景觀溫馨3房💯",
-      "address": "高雄市鳳山區龍成路34巷",
-      "price": 22000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 37.6,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20955790",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2024/09/23/172709907239509505.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2024/09/23/172709907238477507.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2024/09/23/172709907243048300.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 114,
-      "title": "✿社會住宅✿85大樓.大遠百3房附家具",
-      "address": "高雄市苓雅區新光路62巷10號",
-      "price": 15000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 27.6,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/16557972",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2026/03/30/177485532489784204.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2024/05/01/171454884883710407.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2024/05/01/171454890397546206.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 117,
-      "title": "兆基社會住宅🏠北昌二街/華鳳特區/2+1房/平車/可租補",
-      "address": "高雄市鳳山區北昌二街",
-      "price": 19000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 22.8,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20951777",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2026/03/30/177483179590564302.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/30/177483179555607601.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/03/30/177483179564410304.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 118,
-      "title": "兆基社會住宅🏠三民區5房高CP透天免仲可租補",
-      "address": "高雄市三民區民族一路63巷",
-      "price": 18000,
-      "priceNote": "",
-      "rooms": "5房1廳",
-      "area": 39.7,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20873098",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2026/03/17/177372760880454204.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/17/177372760848118307.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/03/17/177372760817802804.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 121,
-      "title": "兆基社會住宅🏠武松路稀有華夏｜舒適住宅出租",
-      "address": "高雄市鳳山區武松街",
-      "price": 17000,
-      "priceNote": "",
-      "rooms": "3房1廳",
-      "area": 22.9,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20847902",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2026/03/13/177337534249033004.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/13/177337534251858700.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/13/177337534220449902.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 122,
-      "title": "兆基社會住宅🏡鳳山區八德路免仲可補助電梯3房",
-      "address": "高雄市鳳山區八德路",
-      "price": 17500,
-      "priceNote": "",
-      "rooms": "3房1廳",
-      "area": 25.1,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20673586",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2025/04/10/174427051109098302.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2025/04/10/174427051076652206.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2025/04/10/174427051077929805.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 124,
-      "title": "永芳國小三房平面車位另計費用~社會住宅",
-      "address": "高雄市大寮區進學路70巷40號",
-      "price": 17000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 27.3,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20955158",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-30 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2025/11/13/176300731484182901.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2025/11/13/176300731479680706.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2025/11/13/176300731470216203.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 125,
-      "title": "兆基社會住宅🏡翠華路免仲可補助電梯3房",
-      "address": "高雄市左營區翠華路601巷",
-      "price": null,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 34.3,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20960103",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-31 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2026/03/31/177491840695346103.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 126,
-      "title": "3房近高雄科技大學（原高應大）/育英護專",
-      "address": "高雄市三民區大豐二路564巷",
-      "price": 16500,
-      "priceNote": "",
-      "rooms": "3房1廳",
-      "area": 37.0,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20960090",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-31 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2019/04/12/155503334848608104.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2022/04/26/165093842541225102.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2022/04/26/165093842573883604.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 128,
-      "title": "一佳租賃🏆果貿社區大四房可租補可議",
-      "address": "高雄市左營區果峰街3巷27號",
-      "price": 18000,
-      "priceNote": "",
-      "rooms": "4房2廳",
-      "area": 44.4,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20958855",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-31 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2026/01/05/176762423495349904.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/01/05/176762423537421603.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/01/05/176762423492952302.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 130,
-      "title": "鳳山中山路電梯大樓",
-      "address": "高雄市鳳山區立志街",
-      "price": 21000,
-      "priceNote": "",
-      "rooms": "4房2廳",
-      "area": 37.0,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20958713",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-31 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2026/02/04/177017509442821502.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/02/04/177017509442490004.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/02/04/177017509437260309.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
       "id": 132,
       "title": "🏡賦御社宅🍎免服務費可租補/南京新都大三房雙車位需另租",
       "address": "高雄市鳳山區南福街",
@@ -944,38 +433,13 @@
       "rating": 0
     },
     {
-      "id": 136,
-      "title": "💯巨蛋MRT博愛100採光3房平車可租補-權威",
-      "address": "高雄市左營區立信路",
-      "price": 22000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 47.0,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20957571",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-31 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2026/01/28/176958898248951002.jpg!fit.1000x.water2.jpg",
-        "https://img1.591.com.tw/house/2022/10/22/166640870826370009.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2022/10/22/166640870744836601.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
       "id": 139,
       "title": "鳳山國中.3房2廳(家電齊全.可租補)",
       "address": "高雄市鳳山區瑞興路423巷26弄",
       "price": 12800,
       "priceNote": "",
       "rooms": "3房2廳",
-      "area": 24.0,
+      "area": 24,
       "areaUnit": "坪",
       "features": [
         "整層住家",
@@ -1019,257 +483,33 @@
       "rating": 0
     },
     {
-      "id": 147,
-      "title": "５房～整層學生合租～建工路X民族路附近",
-      "address": "高雄市三民區德山街707巷",
-      "price": 17999,
-      "priceNote": "",
-      "rooms": "5房1廳",
-      "area": 51.0,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20965225",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-31 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2009/08/03/124930658680439209.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2013/03/29/136451783741917209.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2009/08/03/124930658736516305.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 151,
-      "title": "寄居蟹社會住宅🏠大寮區大同街免仲可補助電梯3房",
-      "address": "高雄市大寮區大同街",
-      "price": 12000,
+      "id": 144,
+      "title": "★中山新城★正捷運鳳山國中~3房＋平車位",
+      "address": "高雄市鳳山區鳳山區-四維街",
+      "price": 18800,
       "priceNote": "",
       "rooms": "3房2廳",
-      "area": 24.2,
+      "area": "46坪",
       "areaUnit": "坪",
       "features": [
-        "整層住家",
         "整層住家"
       ],
       "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20931875",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-31 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2025/03/06/174124790806579704.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2025/03/06/174124790805224407.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2025/03/06/174124790803813403.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 154,
-      "title": "💰可申請租屋補助｜高師大步行宅｜精美3房輕鬆入住",
-      "address": "高雄市苓雅區四維二路",
-      "price": 22000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 27.0,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20963760",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-31 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2026/03/31/177494120875906508.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/31/177494130438594902.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/31/177494120843092907.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 158,
-      "title": "👉社會住宅👈輕軌旁三房出租",
-      "address": "高雄市三民區九如一路",
-      "price": 14500,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 27.5,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20963033",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-03-31 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2026/03/31/177493763001856709.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/31/177493762981189501.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/03/31/177493762974449908.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 160,
-      "title": "三房一廳一廚一衛,近高醫,高應大附近",
-      "address": "高雄市三民區建工路755號",
-      "price": 8000,
-      "priceNote": "",
-      "rooms": "3房1廳",
-      "area": 31.0,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20968129",
-      "status": "pending",
+      "sourceUrl": "https://rent.591.com.tw/20940413",
+      "status": "monitor",
       "contactTime": "",
       "notes": "[自動監控] 2026-04-01 發現",
       "images": [
-        "https://img2.591.com.tw/house/2009/11/17/125845346548500404.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2020/03/08/158364385632188402.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2020/03/08/158364385841554407.jpg!510x400.jpg"
+        "https://img2.591.com.tw/house/2023/05/17/168431748492473609.png!510x400.png",
+        "https://img1.591.com.tw/house/2023/05/10/168372416945165507.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2023/05/10/168372418651034105.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2023/05/10/168372419069715206.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2023/05/10/168372420367121305.jpg!510x400.jpg"
       ],
       "rating": 0
     },
     {
-      "id": 162,
-      "title": "左營高鐵正3房平面車位/近台積電/可租補/文府、福山學區",
-      "address": "高雄市左營區重忠路",
-      "price": 21000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 23.0,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20967827",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-04-01 發現",
-      "images": [
-        "https://img2.591.com.tw/video/cover/2025-09-17/2547400.png!1000x.water2.png",
-        "https://img2.591.com.tw/house/2025/09/17/175805029312849404.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2025/09/17/175805029314820602.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 164,
-      "title": "近生態園區捷運＃榮總＃簡約舒適＃格局佳＃平移車位",
-      "address": "高雄市左營區文自路526號",
-      "price": 21000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 45.2,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20792460",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-04-01 發現",
-      "images": [
-        "https://img1.591.com.tw/house/2022/08/05/165965709425419509.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2022/08/05/165965711025607307.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2022/08/05/165965710540618602.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 166,
-      "title": "✨明誠大道東|中高樓陽台進出|明亮三房+平車",
-      "address": "高雄市三民區明誠一路",
-      "price": 22000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 42.4,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20837307",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-04-01 發現",
-      "images": [
-        "https://img2.591.com.tw/video/cover/2026-03-11/2986072.png!1000x.water2.png",
-        "https://img1.591.com.tw/house/2026/03/11/177323299896374405.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/03/11/177323299955947905.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 169,
-      "title": "高鐵陽台進出學區三房平車",
-      "address": "高雄市左營區文天路",
-      "price": 22000,
-      "priceNote": "",
-      "rooms": "3房2廳",
-      "area": 34.8,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20966528",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-04-01 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2026/03/31/177496265312376602.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/31/177496265312618605.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/31/177496265339664005.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 170,
-      "title": "兆基社會住宅🏡鳳山輕奢裝潢三房可租補",
-      "address": "高雄市鳳山區漢慶街82巷",
-      "price": 17000,
-      "priceNote": "",
-      "rooms": "3房1廳",
-      "area": 30.3,
-      "areaUnit": "坪",
-      "features": [
-        "整層住家",
-        "整層住家"
-      ],
-      "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20968410",
-      "status": "pending",
-      "contactTime": "",
-      "notes": "[自動監控] 2026-04-01 發現",
-      "images": [
-        "https://img2.591.com.tw/house/2026/04/01/177500621988097900.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/04/01/177500621992944400.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/04/01/177500621995960506.jpg!510x400.jpg"
-      ],
-      "rating": 0
-    },
-    {
-      "id": 171,
+      "id": 145,
       "title": "文山特區整棟透天稀有釋出便宜出租",
       "address": "高雄市鳳山區鳳山區-文藝街162巷",
       "price": 19800,
@@ -1295,33 +535,59 @@
       "rating": 0
     },
     {
-      "id": 172,
-      "title": "【衛武營/三井旁】邊間三面採光、極致省電安全宅｜職人長租首選",
-      "address": "高雄市鳳山區鳳山區-國興街1巷",
-      "price": 17000,
+      "id": 146,
+      "title": "中崙社區二標優質電梯大樓住宅出租",
+      "address": "高雄市鳳山區鳳山區-中崙二路582巷",
+      "price": 15000,
       "priceNote": "",
-      "rooms": "3房1廳",
-      "area": "26.9坪",
+      "rooms": "3房2廳",
+      "area": "36坪",
       "areaUnit": "坪",
       "features": [
         "整層住家"
       ],
       "source": "591租屋網",
-      "sourceUrl": "https://rent.591.com.tw/20868873",
+      "sourceUrl": "https://rent.591.com.tw/20910053",
       "status": "monitor",
       "contactTime": "",
       "notes": "[自動監控] 2026-04-01 發現",
       "images": [
-        "https://img1.591.com.tw/video/cover/2026-03-17/2994433.png!1000x.water2.png",
-        "https://img2.591.com.tw/house/2026/03/17/177371375997791001.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/03/17/177371375999003104.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/03/17/177371376002405804.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/03/17/177371375999236906.jpg!510x400.jpg"
+        "https://img1.591.com.tw/house/2022/08/13/166039868816633627.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2022/08/13/166039868816693657.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2022/08/13/166039868816672572.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2022/08/13/166039868816710724.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2022/08/13/166039868816701339.jpg!510x400.jpg"
       ],
       "rating": 0
     },
     {
-      "id": 173,
+      "id": 147,
+      "title": "管理規範-大樓🏡公道租金-寵物可議",
+      "address": "高雄市鳳山區鳳山區-濱山街1號",
+      "price": 11000,
+      "priceNote": "",
+      "rooms": "3房1廳",
+      "area": "30坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20917625",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-01 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/04/01/177501535482876800.jpg!1000x.water2.jpg",
+        "https://img2.591.com.tw/house/2026/04/01/177501535482876800.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2014/07/05/140456895507293305.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2014/07/05/140456896105392003.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2014/07/05/140456896234012206.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 148,
       "title": "下樓即武廟商圈機能公寓王",
       "address": "高雄市苓雅區苓雅區-武廟路",
       "price": 16000,
@@ -1339,7 +605,7 @@
       "notes": "[自動監控] 2026-04-01 發現",
       "images": [
         "https://img1.591.com.tw/house/2026/03/02/177243598235813707.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/03/02/177243598300852802.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/03/02/177243598300852802.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/03/02/177243598300210408.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/03/02/177243598261439905.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/03/02/177243598268436207.jpg!510x400.jpg"
@@ -1347,7 +613,7 @@
       "rating": 0
     },
     {
-      "id": 174,
+      "id": 149,
       "title": "近捷運信義國小站/精美公寓三房/寵物友善",
       "address": "高雄市新興區新興區-仁愛一街157號",
       "price": 22000,
@@ -1364,16 +630,42 @@
       "contactTime": "",
       "notes": "[自動監控] 2026-04-01 發現",
       "images": [
-        "https://img2.591.com.tw/house/2026/01/06/176768066723450806.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/01/06/176768066736958609.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/01/06/176768066740650201.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/01/06/176768066727026103.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/01/06/176768066745384809.jpg!510x400.jpg"
+        "https://img1.591.com.tw/house/2026/01/06/176768066723450806.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/06/176768066736958609.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/06/176768066740650201.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/06/176768066727026103.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/06/176768066745384809.jpg!510x400.jpg"
       ],
       "rating": 0
     },
     {
-      "id": 175,
+      "id": 150,
+      "title": "近文化中心3房空屋剛剛重新粉刷過喔!!",
+      "address": "高雄市新興區新興區-東海街26號",
+      "price": 12000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "21.7坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20926992",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-01 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/01/16/176852801831194803.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/16/176852801842496909.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/16/176852801846034201.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/16/176852801845657308.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/16/176852801852281807.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 151,
       "title": "🏠【捷運文化中心站】台水台電｜可租補｜可入戶藉｜可報稅",
       "address": "高雄市新興區新興區-和平一路215號",
       "price": 22000,
@@ -1390,16 +682,16 @@
       "contactTime": "",
       "notes": "[自動監控] 2026-04-01 發現",
       "images": [
-        "https://img2.591.com.tw/house/2026/01/20/176891470379993908.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/01/20/176891469953031003.jpg!510x400.jpg",
-        "https://img2.591.com.tw/house/2026/01/20/176891470956417702.jpg!510x400.jpg",
-        "https://img1.591.com.tw/house/2026/01/20/176891471477558504.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/20/176891470379993908.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/20/176891469953031003.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/20/176891470956417702.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/20/176891471477558504.jpg!510x400.jpg",
         "https://img1.591.com.tw/house/2026/01/20/176891472245757303.jpg!510x400.jpg"
       ],
       "rating": 0
     },
     {
-      "id": 176,
+      "id": 152,
       "title": "租-新崛江R9捷運高樓層超大商業住辦中心",
       "address": "高雄市新興區新興區-五福二路147號",
       "price": 18000,
@@ -1419,7 +711,7 @@
         "https://img1.591.com.tw/house/2026/02/24/177189561290315301.png!510x400.png",
         "https://img2.591.com.tw/house/2026/02/24/177189561286148708.png!510x400.png",
         "https://img1.591.com.tw/house/2026/02/24/177189561294712406.png!510x400.png",
-        "https://img1.591.com.tw/house/2026/02/24/177189561266095902.png!510x400.png",
+        "https://img2.591.com.tw/house/2026/02/24/177189561266095902.png!510x400.png",
         "https://img2.591.com.tw/house/2026/02/24/177189561324479508.png!510x400.png"
       ],
       "rating": 0
@@ -1431,133 +723,424 @@
       "title": "文山特區整棟透天稀有釋出便宜出租",
       "address": "高雄市鳳山區鳳山區-文藝街162巷",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-28"
+      "rejectedAt": "2026-03-28",
+      "sourceUrl": ""
     },
     {
       "id": 2,
       "title": "學校旁,孝親房,可停汽車,鬧中取靜市中心",
       "address": "高雄市鳳山區鳳山區-文衡路108巷",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-28"
+      "rejectedAt": "2026-03-28",
+      "sourceUrl": ""
     },
     {
       "id": 3,
       "title": "大明路巷內公寓五樓出租",
       "address": "高雄市鳳山區鳳山區-大明路16巷4號",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-28"
+      "rejectedAt": "2026-03-28",
+      "sourceUrl": ""
     },
     {
       "id": 4,
       "title": "優質社區📍3房2廳2衛/尊享空間",
       "address": "高雄市苓雅區苓雅區-憲政路",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-28"
+      "rejectedAt": "2026-03-28",
+      "sourceUrl": ""
     },
     {
       "id": 5,
       "title": "道明中學正對面/3+1房1廳2陽台",
       "address": "高雄市苓雅區苓雅區-建國一路",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-28"
+      "rejectedAt": "2026-03-28",
+      "sourceUrl": ""
     },
     {
       "id": 6,
       "title": "近捷運信義國小站/精美公寓三房/寵物友善",
       "address": "高雄市新興區新興區-仁愛一街157號",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-28"
+      "rejectedAt": "2026-03-28",
+      "sourceUrl": ""
     },
     {
       "id": 7,
       "title": "租-新崛江R9捷運高樓層超大商業住辦中心",
       "address": "高雄市新興區新興區-五福二路147號",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-28"
+      "rejectedAt": "2026-03-28",
+      "sourceUrl": ""
     },
     {
       "id": 8,
       "title": "近文化中心3房空屋剛剛重新粉刷過喔!!",
       "address": "高雄市新興區新興區-東海街26號",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-28"
+      "rejectedAt": "2026-03-28",
+      "sourceUrl": ""
     },
     {
       "id": 1,
       "title": "文山特區整棟透天稀有釋出便宜出租",
       "address": "高雄市鳳山區鳳山區-文藝街162巷",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
     },
     {
       "id": 2,
       "title": "學校旁,孝親房,可停汽車,鬧中取靜市中心",
       "address": "高雄市鳳山區鳳山區-文衡路108巷",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
     },
     {
       "id": 3,
       "title": "【衛武營/三井旁】邊間三面採光、極致省電安全宅｜職人長租首選",
       "address": "高雄市鳳山區鳳山區-國興街1巷",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
     },
     {
       "id": 4,
       "title": "馬姐管家👍大寮捷運站🔥景觀全新2+1房.平面車位",
       "address": "高雄市鳳山區鳳山區-鳳捷路",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
     },
     {
       "id": 5,
       "title": "專屬陽臺-可寵洽-人氣社區-雅緻居所",
       "address": "高雄市苓雅區苓雅區-憲政路",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
     },
     {
       "id": 6,
       "title": "捷運輕軌亞洲新灣【3房2廳2衛】會開發票",
       "address": "高雄市苓雅區苓雅區-新光路62巷",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
     },
     {
       "id": 7,
       "title": "近捷運信義國小站/精美公寓三房/寵物友善",
       "address": "高雄市新興區新興區-仁愛一街157號",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
     },
     {
       "id": 8,
       "title": "租-新崛江R9捷運高樓層超大商業住辦中心",
       "address": "高雄市新興區新興區-五福二路147號",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
     },
     {
       "id": 9,
       "title": "大明路巷內公寓五樓出租",
       "address": "高雄市鳳山區鳳山區-大明路16巷4號",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
     },
     {
       "id": 10,
       "title": "中崙社區二標優質電梯大樓住宅出租",
       "address": "高雄市鳳山區鳳山區-中崙二路582巷",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
     },
     {
       "id": 11,
       "title": "近文化中心3房空屋剛剛重新粉刷過喔!!",
       "address": "高雄市新興區新興區-東海街26號",
       "source": "591租屋網",
-      "rejectedAt": "2026-03-29"
+      "rejectedAt": "2026-03-29",
+      "sourceUrl": ""
+    },
+    {
+      "id": 160,
+      "title": "三房一廳一廚一衛,近高醫,高應大附近",
+      "address": "高雄市三民區建工路755號",
+      "source": "591租屋網",
+      "rejectedAt": "2026-04-01",
+      "sourceUrl": ""
+    },
+    {
+      "id": 118,
+      "title": "兆基社會住宅🏠三民區5房高CP透天免仲可租補",
+      "address": "高雄市三民區民族一路63巷",
+      "source": "591租屋網",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 106,
+      "title": "🚩捷運信義國小站VS文化中心站🚩優質地段理想住所",
+      "address": "高雄市新興區民生一路",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20956601",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 125,
+      "title": "兆基社會住宅🏡翠華路免仲可補助電梯3房",
+      "address": "高雄市左營區翠華路601巷",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20960103",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 12,
+      "title": "明仁路 - 中迪房屋大樂河堤正三房",
+      "address": "高雄市三民區明仁路",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20915798",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 110,
+      "title": "一佳租賃🌳永豐瑞隆四房雙衛|前後陽台|採光佳|空間很大",
+      "address": "高雄市鳳山區新富路47號",
+      "source": "591租屋網",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 112,
+      "title": "近港灣核心地段/市中心/透天厝出租可租補/生活機能佳",
+      "address": "高雄市苓雅區昇平街139巷2弄",
+      "source": "591租屋網",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 111,
+      "title": "一佳租賃🌳仲免|公寓二樓|家具齊全|採光佳|可申請租補|",
+      "address": "高雄市鳳山區和興街",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20947444",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 113,
+      "title": "五甲輕屋齡大樓✔️高樓層景觀溫馨3房💯",
+      "address": "高雄市鳳山區龍成路34巷",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20955790",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 114,
+      "title": "✿社會住宅✿85大樓.大遠百3房附家具",
+      "address": "高雄市苓雅區新光路62巷10號",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/16557972",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 117,
+      "title": "兆基社會住宅🏠北昌二街/華鳳特區/2+1房/平車/可租補",
+      "address": "高雄市鳳山區北昌二街",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20951777",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 121,
+      "title": "兆基社會住宅🏠武松路稀有華夏｜舒適住宅出租",
+      "address": "高雄市鳳山區武松街",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20847902",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 122,
+      "title": "兆基社會住宅🏡鳳山區八德路免仲可補助電梯3房",
+      "address": "高雄市鳳山區八德路",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20673586",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 124,
+      "title": "永芳國小三房平面車位另計費用~社會住宅",
+      "address": "高雄市大寮區進學路70巷40號",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20955158",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 126,
+      "title": "3房近高雄科技大學（原高應大）/育英護專",
+      "address": "高雄市三民區大豐二路564巷",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20960090",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 130,
+      "title": "鳳山中山路電梯大樓",
+      "address": "高雄市鳳山區立志街",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20958713",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 136,
+      "title": "💯巨蛋MRT博愛100採光3房平車可租補-權威",
+      "address": "高雄市左營區立信路",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20957571",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 154,
+      "title": "💰可申請租屋補助｜高師大步行宅｜精美3房輕鬆入住",
+      "address": "高雄市苓雅區四維二路",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20963760",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 158,
+      "title": "👉社會住宅👈輕軌旁三房出租",
+      "address": "高雄市三民區九如一路",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20963033",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 162,
+      "title": "左營高鐵正3房平面車位/近台積電/可租補/文府、福山學區",
+      "address": "高雄市左營區重忠路",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20967827",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 164,
+      "title": "近生態園區捷運＃榮總＃簡約舒適＃格局佳＃平移車位",
+      "address": "高雄市左營區文自路526號",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20792460",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 166,
+      "title": "✨明誠大道東|中高樓陽台進出|明亮三房+平車",
+      "address": "高雄市三民區明誠一路",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20837307",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 169,
+      "title": "高鐵陽台進出學區三房平車",
+      "address": "高雄市左營區文天路",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20966528",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 170,
+      "title": "兆基社會住宅🏡鳳山輕奢裝潢三房可租補",
+      "address": "高雄市鳳山區漢慶街82巷",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20968410",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 171,
+      "title": "文山特區整棟透天稀有釋出便宜出租",
+      "address": "高雄市鳳山區鳳山區-文藝街162巷",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20893742",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 172,
+      "title": "【衛武營/三井旁】邊間三面採光、極致省電安全宅｜職人長租首選",
+      "address": "高雄市鳳山區鳳山區-國興街1巷",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20868873",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 175,
+      "title": "🏠【捷運文化中心站】台水台電｜可租補｜可入戶藉｜可報稅",
+      "address": "高雄市新興區新興區-和平一路215號",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20937637",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 176,
+      "title": "租-新崛江R9捷運高樓層超大商業住辦中心",
+      "address": "高雄市新興區新興區-五福二路147號",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20881468",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 13,
+      "title": "文山特區典雅美四房",
+      "address": "高雄市鳳山區鳳山區-青年路二段588巷27號",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20876554",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 15,
+      "title": "★中山新城★正捷運鳳山國中~3房＋平車位",
+      "address": "高雄市鳳山區鳳山區-四維街",
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20940413",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 147,
+      "title": "５房～整層學生合租～建工路X民族路附近",
+      "address": "高雄市三民區德山街707巷",
+      "source": "591租屋網",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 151,
+      "title": "寄居蟹社會住宅🏠大寮區大同街免仲可補助電梯3房",
+      "address": "高雄市大寮區大同街",
+      "source": "591租屋網",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 174,
+      "title": "近捷運信義國小站/精美公寓三房/寵物友善",
+      "address": "高雄市新興區新興區-仁愛一街157號",
+      "source": "591租屋網",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 173,
+      "title": "下樓即武廟商圈機能公寓王",
+      "address": "高雄市苓雅區苓雅區-武廟路",
+      "source": "591租屋網",
+      "rejectedAt": "2026-04-01"
+    },
+    {
+      "id": 128,
+      "title": "一佳租賃🏆果貿社區大四房可租補可議",
+      "address": "高雄市左營區果峰街3巷27號",
+      "source": "591租屋網",
+      "rejectedAt": "2026-04-01"
     }
   ]
 }
