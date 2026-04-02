@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-02 09:23",
+    "lastUpdated": "2026-04-02 14:17",
     "totalProperties": 8
   },
   "properties": [
@@ -791,6 +791,58 @@
         "https://img2.591.com.tw/house/2026/02/09/177064162136741204.png!510x400.png",
         "https://img2.591.com.tw/house/2026/02/09/177064162035768205.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/02/09/177064162042748508.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 156,
+      "title": "鳳山中山路電梯大樓",
+      "address": "高雄市鳳山區鳳山區-立志街",
+      "price": 21000,
+      "priceNote": "",
+      "rooms": "4房2廳",
+      "area": "37坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20958713",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-02 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/02/04/177017509442821502.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/02/04/177017509442490004.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/02/04/177017509437260309.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/02/04/177017509449453402.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/02/04/177017509445194309.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 157,
+      "title": "大明路巷內公寓五樓出租",
+      "address": "高雄市鳳山區鳳山區-大明路16巷4號",
+      "price": 15000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "25坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20907038",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-02 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/03/23/177424281769114200.jpeg!510x400.jpeg",
+        "https://img1.591.com.tw/house/2026/03/23/177424281809500007.jpeg!510x400.jpeg",
+        "https://img1.591.com.tw/house/2026/03/23/177424281814262908.jpeg!510x400.jpeg",
+        "https://img1.591.com.tw/house/2026/03/23/177424281814815609.jpeg!510x400.jpeg",
+        "https://img2.591.com.tw/house/2026/03/23/177424281921632905.jpeg!510x400.jpeg"
       ],
       "rating": 0
     }
