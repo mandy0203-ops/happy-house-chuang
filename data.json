@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-01 14:17",
+    "lastUpdated": "2026-04-02 09:23",
     "totalProperties": 8
   },
   "properties": [
@@ -713,6 +713,84 @@
         "https://img1.591.com.tw/house/2026/02/24/177189561294712406.png!510x400.png",
         "https://img2.591.com.tw/house/2026/02/24/177189561266095902.png!510x400.png",
         "https://img2.591.com.tw/house/2026/02/24/177189561324479508.png!510x400.png"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 153,
+      "title": "🔥可租補|🌳近文山特區園藝試驗所三房大空間",
+      "address": "高雄市鳳山區鳳山區-文澄街1巷9號",
+      "price": 20000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "23坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20915213",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-02 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/03/24/177433771262321700.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/03/24/177433774711628209.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2025/05/02/174616208295337100.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/03/24/177433774749012509.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/03/24/177433774695173900.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 154,
+      "title": "【衛武營/三井旁】邊間三面採光、極致省電安全宅｜職人長租首選",
+      "address": "高雄市鳳山區鳳山區-國興街1巷",
+      "price": 17000,
+      "priceNote": "",
+      "rooms": "3房1廳",
+      "area": "26.9坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20868873",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-02 發現",
+      "images": [
+        "https://img2.591.com.tw/video/cover/2026-03-17/2994433.png!1000x.water2.png",
+        "https://img1.591.com.tw/house/2026/03/17/177371375997791001.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/03/17/177371375999003104.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/03/17/177371376002405804.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/03/17/177371375999236906.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 155,
+      "title": "✨光華觀光夜市｜三和市場華廈｜全新樣貌登場-權威",
+      "address": "高雄市苓雅區苓雅區-三多二路",
+      "price": 22000,
+      "priceNote": "",
+      "rooms": "4房2廳",
+      "area": "38.5坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20865592",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-02 發現",
+      "images": [
+        "https://img2.591.com.tw/video/cover/2026-02-09/2951355.png!1000x.water2.png",
+        "https://img1.591.com.tw/house/2026/02/09/177064162039440500.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/02/09/177064162136741204.png!510x400.png",
+        "https://img2.591.com.tw/house/2026/02/09/177064162035768205.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/02/09/177064162042748508.jpg!510x400.jpg"
       ],
       "rating": 0
     }
