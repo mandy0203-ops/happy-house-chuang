@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-03 09:23",
+    "lastUpdated": "2026-04-03 14:17",
     "totalProperties": 8
   },
   "properties": [
@@ -1044,6 +1044,32 @@
         "https://img1.591.com.tw/house/2025/12/03/176474443457173904.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2025/12/03/176474443454336505.jpg!510x400.jpg",
         "https://img1.591.com.tw/house/2025/12/03/176474443454112703.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 166,
+      "title": "正義車站全新裝修透天的第四層樓整層",
+      "address": "高雄市苓雅區苓雅區-正義路",
+      "price": 19800,
+      "priceNote": "",
+      "rooms": "3房1廳",
+      "area": "25坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20830710",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-03 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2025/01/25/173773567747760008.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2025/01/25/173773567748512400.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2025/01/25/173773567748477600.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2025/01/25/173773567746872204.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2025/01/25/173773567751230504.jpg!510x400.jpg"
       ],
       "rating": 0
     }
