@@ -1650,7 +1650,7 @@
 
     // Check server on load, then periodically
     checkServer();
-    setInterval(checkServer, 5000); // 每 5 秒檢查伺服器是否有新資料
+    setInterval(checkServer, 30000); // 每 30 秒檢查伺服器是否有新資料（降低離線模式 console error）
 
     // ============ UNSAVED CHANGES ============
     function markChanged() {
