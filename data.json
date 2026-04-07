@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-06 14:17",
+    "lastUpdated": "2026-04-07 14:17",
     "totalProperties": 8
   },
   "properties": [
@@ -1548,6 +1548,32 @@
         "https://img2.591.com.tw/house/2024/03/04/170955862624897406.jpg!510x400.jpg",
         "https://img1.591.com.tw/house/2024/03/04/170955861532701707.jpg!510x400.jpg",
         "https://img1.591.com.tw/house/2024/03/04/170955863913174803.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 186,
+      "title": "鳳山國中捷運/電梯/大4房/屋況好/可養寵物",
+      "address": "高雄市鳳山區鳳山區-中山東路60號",
+      "price": 19800,
+      "priceNote": "",
+      "rooms": "4房2廳",
+      "area": "31坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21002322",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-07 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2019/10/24/157190997266559800.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2019/10/24/157190997853267201.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2019/10/24/157190998388964904.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2019/10/24/157190998810009800.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2019/10/24/157191000495814205.jpg!510x400.jpg"
       ],
       "rating": 0
     }
