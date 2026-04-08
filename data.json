@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-07 14:17",
+    "lastUpdated": "2026-04-08 14:17",
     "totalProperties": 8
   },
   "properties": [
@@ -1574,6 +1574,32 @@
         "https://img2.591.com.tw/house/2019/10/24/157190998388964904.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2019/10/24/157190998810009800.jpg!510x400.jpg",
         "https://img1.591.com.tw/house/2019/10/24/157191000495814205.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 187,
+      "title": "五甲鳳農市場~三房平車",
+      "address": "高雄市鳳山區鳳山區-凱旋路",
+      "price": 22000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "28.7坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21016657",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-08 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/04/08/177562098737322102.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/08/177562090034253706.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/08/177562093490257103.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/08/177562098805154608.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/08/177562098746715809.jpg!510x400.jpg"
       ],
       "rating": 0
     }
