@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-08 14:17",
+    "lastUpdated": "2026-04-10 09:23",
     "totalProperties": 8
   },
   "properties": [
@@ -1600,6 +1600,32 @@
         "https://img1.591.com.tw/house/2026/04/08/177562093490257103.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/04/08/177562098805154608.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/04/08/177562098746715809.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 188,
+      "title": "🔥鎮北國小正三房🔥星榕🤩",
+      "address": "高雄市鳳山區鳳山區-北文街",
+      "price": 19800,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "32.1坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21028818",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-10 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/04/09/177573026215194004.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/09/177573026223499506.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/09/177573026225849300.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/09/177573026225059304.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/09/177573026232792303.jpg!510x400.jpg"
       ],
       "rating": 0
     }
