@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-12 09:23",
+    "lastUpdated": "2026-04-12 14:17",
     "totalProperties": 8
   },
   "properties": [
@@ -1652,6 +1652,58 @@
         "https://img2.591.com.tw/house/2026/03/20/177400599042081306.jpg!510x400.jpg",
         "https://img1.591.com.tw/house/2026/03/20/177400599096092006.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/03/20/177400601611844400.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 190,
+      "title": "🌟捷運信義國小400M🌟大3房雙衛浴｜超大使用空間",
+      "address": "高雄市新興區新興區-福建街397號",
+      "price": 22000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "33坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21044830",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-12 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/04/12/177596954115798204.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/12/177596954116111103.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/12/177596954116587402.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/12/177596954120097705.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/12/177596954123916402.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 191,
+      "title": "⭐文化中心⭐五福國中學區｜採光大3房｜可租補報稅入籍",
+      "address": "高雄市新興區新興區-福建街",
+      "price": 22000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "33坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21028864",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-12 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/04/10/177578884395003107.jpg!fit.1000x.water2.jpg",
+        "https://img2.591.com.tw/house/2026/04/10/177578824078410701.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/10/177578824088177701.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/10/177578824082062400.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/10/177578824060654906.jpg!510x400.jpg"
       ],
       "rating": 0
     }
