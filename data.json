@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-12 14:17",
+    "lastUpdated": "2026-04-13 20:41",
     "totalProperties": 8
   },
   "properties": [
@@ -1704,6 +1704,383 @@
         "https://img1.591.com.tw/house/2026/04/10/177578824088177701.jpg!510x400.jpg",
         "https://img1.591.com.tw/house/2026/04/10/177578824082062400.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/04/10/177578824060654906.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 192,
+      "title": "三房一廳一衛一廚",
+      "address": "高雄市三民區昌平街9號",
+      "price": 12500,
+      "priceNote": "",
+      "rooms": "3房1廳",
+      "area": 22.0,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21047434",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/04/12/177600122653773505.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/12/177600122643674306.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/12/177600122653928805.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 193,
+      "title": "鳳山大湖國家三房車位",
+      "address": "高雄市鳳山區八德路156號",
+      "price": 20000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": 27.0,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21047158",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/03/11/177323534589240604.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/03/11/177323534563933406.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/03/11/177323534535337603.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 194,
+      "title": "一佳租賃🏆自然採光.明亮大空間~.適合家庭【可租補】",
+      "address": "高雄市苓雅區建國一路203巷2弄12號",
+      "price": 16000,
+      "priceNote": "",
+      "rooms": "4房2廳",
+      "area": 29.6,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21046974",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/04/12/177599577390492805.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/12/177599577445143807.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/12/177599577365865001.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 195,
+      "title": "中迪房屋🏠大寮鳳林一路|三房樓店出租|騎樓可停車",
+      "address": "高雄市大寮區鳳林一路300巷",
+      "price": 17500,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": 39.0,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21046769",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/03/27/177461408639673703.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/03/27/177461408625032507.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/03/27/177461408617934302.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 196,
+      "title": "高醫優質華廈",
+      "address": "高雄市三民區綏遠一街",
+      "price": 20000,
+      "priceNote": "",
+      "rooms": "4房2廳",
+      "area": 46.0,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21045715",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2025/08/22/175583111217683107.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2025/08/22/175583111187450808.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2025/08/22/175583111341980401.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 197,
+      "title": "建工商圈/高雄高工輕軌站/高科大便宜透天出租",
+      "address": "高雄市三民區建德路204巷",
+      "price": 19800,
+      "priceNote": "",
+      "rooms": "10房2廳",
+      "area": 43.5,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21045650",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/04/12/177597996265172005.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/12/177597996270326201.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/12/177597996276415809.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 198,
+      "title": "可租屋補助陽台進出三房鳳山火車站二樓",
+      "address": "高雄市鳳山區明昌街18巷",
+      "price": 18000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": 24.3,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/18486232",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2024/03/08/170989553789961804.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2024/03/08/170989553736796809.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2024/03/08/170989553738225602.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 199,
+      "title": "一層兩戶單純住家｜三房兩衛＋大空間｜生活機能佳",
+      "address": "高雄市三民區教仁路52號",
+      "price": 18000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": 45.0,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21045536",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/04/12/177597840378918101.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/12/177597840362147607.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/12/177597872256063503.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 200,
+      "title": "設備齊全美寓，拎包即可入住",
+      "address": "高雄市三民區延慶街",
+      "price": 18000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": 45.0,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21045488",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2020/08/16/159754799946970704.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2020/08/16/159754799950933448.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2020/08/16/159754799952727398.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 201,
+      "title": "高雄亞洲新灣區四房",
+      "address": "高雄市苓雅區自強三路",
+      "price": 22000,
+      "priceNote": "",
+      "rooms": "4房2廳",
+      "area": 33.5,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21045464",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/04/12/177597775731592509.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/12/177597775725471302.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/12/177597775729482709.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 202,
+      "title": "陽明優質明星學區*大四房出租(含管理費)可租補",
+      "address": "高雄市三民區春陽街91號",
+      "price": 21000,
+      "priceNote": "",
+      "rooms": "4房2廳",
+      "area": 40.4,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21045345",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2025/09/10/175749807925908801.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2025/09/10/175749810032860009.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2025/09/10/175749812846818808.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 203,
+      "title": "陽明商圈可租補邊間含管",
+      "address": "高雄市三民區陽明路170巷4號",
+      "price": 22000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": 30.0,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21043850",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/04/12/177595778431307701.jpeg!510x400.jpeg",
+        "https://img1.591.com.tw/house/2026/04/12/177595778445078601.jpeg!510x400.jpeg",
+        "https://img1.591.com.tw/house/2026/04/12/177595778437171206.jpeg!510x400.jpeg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 204,
+      "title": "水源路大客廳三房/採光通風佳/路邊有車位",
+      "address": "高雄市三民區水源路",
+      "price": 16000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": 19.7,
+      "areaUnit": "坪",
+      "features": [
+        "整層住家",
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21043812",
+      "status": "pending",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/03/13/177338581050136906.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/03/13/177338581046390405.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/02/23/177184469980441803.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 205,
+      "title": "社宅🏠民主橫六合商圈萌寵採光3房美寓美麗島近台17📞愛窩",
+      "address": "高雄市新興區新興區-民主橫路12號",
+      "price": 13000,
+      "priceNote": "",
+      "rooms": "3房1廳",
+      "area": "19.8坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21036038",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/04/10/177581411044650706.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/10/177581411181898104.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/10/177581411264218206.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/10/177581411144241100.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/10/177581411222012306.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 206,
+      "title": "中正三路與復興一路、公寓3房附全套傢電，5分到信義國小站",
+      "address": "高雄市新興區新興區-復興一路",
+      "price": 16000,
+      "priceNote": "",
+      "rooms": "3房1廳",
+      "area": "25坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21054136",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-13 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/02/28/177227360857163209.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/02/28/177227360860916600.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/02/28/177227360815648005.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/02/28/177227360860449508.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/03/01/177235131599860605.jpg!510x400.jpg"
       ],
       "rating": 0
     }
