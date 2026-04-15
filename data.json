@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-15 09:23",
+    "lastUpdated": "2026-04-15 14:17",
     "totalProperties": 8
   },
   "properties": [
@@ -2107,6 +2107,32 @@
         "https://img1.591.com.tw/house/2026/02/24/177189646014747302.jpeg!510x400.jpeg",
         "https://img1.591.com.tw/house/2026/02/24/177189645987119601.jpeg!510x400.jpeg",
         "https://img2.591.com.tw/house/2026/02/24/177189646014630502.jpeg!510x400.jpeg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 208,
+      "title": "全佳社宅🏠忠孝夜市旁！3樓公寓,💥全佳社宅💥免仲可租補",
+      "address": "高雄市新興區新興區-忠孝一路12巷",
+      "price": 15000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "20.6坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/20924421",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-15 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/01/21/176896591807793006.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/21/176896591808895104.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/21/176896591806514406.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/21/176896591803386503.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/21/176896591839477906.jpg!510x400.jpg"
       ],
       "rating": 0
     }
