@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-04-17 20:41",
+    "lastUpdated": "2026-04-18 09:23",
     "totalProperties": 8
   },
   "properties": [
@@ -2211,6 +2211,58 @@
         "https://img2.591.com.tw/house/2026/04/17/177641221430232604.jpg!510x400.jpg",
         "https://img2.591.com.tw/house/2026/04/17/177641221446590605.jpg!510x400.jpg",
         "https://img1.591.com.tw/house/2026/04/17/177641221449068600.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 212,
+      "title": "鳳山國中站工協市場旁，全新整理三樓美寓",
+      "address": "高雄市鳳山區鳳山區-建國路一段53巷",
+      "price": 20000,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "20.9坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21082257",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-18 發現",
+      "images": [
+        "https://img1.591.com.tw/house/2026/04/17/177641664012813603.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/17/177641664549780401.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/17/177641664536616008.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/04/17/177641664912292300.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/04/17/177641684068113900.jpg!510x400.jpg"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 213,
+      "title": "英明國中寧靜社區公寓-可租補",
+      "address": "高雄市苓雅區苓雅區-英明路204巷",
+      "price": 12500,
+      "priceNote": "",
+      "rooms": "3房2廳",
+      "area": "28坪",
+      "areaUnit": "坪",
+      "features": [
+        "整層住家"
+      ],
+      "source": "591租屋網",
+      "sourceUrl": "https://rent.591.com.tw/21081404",
+      "status": "monitor",
+      "contactTime": "",
+      "notes": "[自動監控] 2026-04-18 發現",
+      "images": [
+        "https://img2.591.com.tw/house/2026/01/26/176939505206970306.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/26/176939505199529107.jpg!510x400.jpg",
+        "https://img2.591.com.tw/house/2026/01/26/176939505204924004.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/26/176939505216616606.jpg!510x400.jpg",
+        "https://img1.591.com.tw/house/2026/01/26/176939505217618706.jpg!510x400.jpg"
       ],
       "rating": 0
     }
