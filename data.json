@@ -2,7 +2,7 @@
   "meta": {
     "title": "找尋幸福之莊 2.0",
     "created": "2026-03-26",
-    "lastUpdated": "2026-11-02 10:38",
+    "lastUpdated": "2026-11-02 10:54",
     "totalProperties": 23
   },
   "properties": [
@@ -1333,8 +1333,8 @@
   "priceStats": {
     "minPrice": 18000,
     "maxPrice": 22000,
-    "averagePrice": 19567,
-    "countWithPrice": 12
+    "averagePrice": 19363,
+    "countWithPrice": 16
   },
   "calendarEvents": [
     {
@@ -3439,7 +3439,7 @@
       "communityName": "",
       "socialHouse": false,
       "petFriendly": false,
-      "bathrooms": 2.0,
+      "bathrooms": 2,
       "fitment": "",
       "refreshTime": "1分鐘前",
       "ownerDirect": false,
